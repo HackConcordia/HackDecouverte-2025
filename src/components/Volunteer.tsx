@@ -1,17 +1,77 @@
 export default function Volunteer() {
     return (
         <section id="volunteer" className="py-20 bg-gray-50 text-center">
-            <h2 className="text-3xl font-bold mb-6">Volunteer With Us</h2>
-            <p className="max-w-2xl mx-auto text-lg text-gray-700 mb-6">
-                Be part of HackDécouverte 2025 by volunteering your skills and helping us
-                make this event a success!
-            </p>
-            <a
-                href="#"
-                className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-xl shadow hover:bg-blue-700"
-            >
-                Sign Up to Volunteer
-            </a>
+
+            <h2 className="text-3xl mb-6 text-[#491000] sm:text-6xl" 
+            style={{
+                borderTop:'3px solid #d00000',
+                borderBottom:'3px solid #d00000',
+                margin:'0 auto',
+                width:'70%', 
+                padding: '20px 0',
+                justifyContent:'center',
+                textTransform:'uppercase',
+                fontWeight:800
+                }}>
+                    Volunteer
+                </h2>
+
+                
+            <section 
+            style={{
+                margin:'0 auto',
+                marginTop:'40px',
+                border:'3px solid #b4ebc9',
+                width:'50%',
+                paddingBottom:'20px',
+                
+            }}>
+                <section className="text-left" 
+                style={{
+                    backgroundColor:'#412721',
+                    padding:'10px 0',
+                    borderBottom:'3px solid #b4ebc9',
+                }}>
+                    <h2 className="text-xl text-[#f9c22f] mx-auto" style={{fontWeight:800, padding:'0 20px'}}>JOIN THE TEAM BEHIND SCENES</h2>
+                </section>
+
+
+                <section  className="text-left" style={{
+                    paddingBottom:'0px',
+                }}>
+                   <p className=" mx-auto text-lg text-gray-700 mb-6" style={{
+                    padding:'20px',
+                    fontSize:'19px'
+                   }}>
+                    Help make our very first edition unforgettable. We're looking for volunteers to support logistics, welcome hackers, and keep the good vibes flowing.
+                </p>
+                
+                </section>
+                    <a
+                        href="#"
+                        className="block py-3 bg-[#b4ebc9] text-[#107475] rounded-full shadow hover:bg-[#f9c22f] w-fit mx-auto mb-4 border-3 border-[#107475] text-xs sm:text-xl"
+                        style={{
+                            fontWeight:800,
+                            width:'60%'
+                        }}
+                    >
+                        VOLUNTEER NOW!
+                    </a> 
+
+                    <a
+                        href="#"
+                        className="block py-3 bg-[#b4ebc9] text-[#107475] rounded-full shadow hover:bg-[#f9c22f] w-fit mx-auto border-3 border-[#107475] text-xs sm:text-xl"
+                        style={{
+                            fontWeight:800,
+                            width:'60%'
+                        }}
+                    >
+                        BECOME A MENTOR!
+                    </a> 
+                
+                
+            </section>
+                
         </section>
     );
 }
