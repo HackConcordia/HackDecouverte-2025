@@ -88,7 +88,7 @@ export default function FAQ() {
         {faqs.map((faq, idx) => (
           <div
             key={idx}
-            className="border rounded-lg p-6 shadow hover:shadow-lg transition"
+            className="border rounded-lg p-6 shadow hover:shadow-lg transition h-fit"
           >
             <button
               className="w-full flex justify-between items-center text-left"
