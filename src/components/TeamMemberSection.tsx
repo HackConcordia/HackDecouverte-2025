@@ -245,8 +245,8 @@ export default function TeamMemberSection() {
                 <div className="flex flex-col-reverse items-start text-white">
                     {/* Left Panel: Displayed Member Details */}
                     <div className="flex flex-col items-start p-4 border-[#9cccae] border-4 bg-[#ffec97dc] rounded-sm shadow-lg w-full mb-4 h-[157px]">
-                        <h3 className="text-xl text-[#491000] font-bold">{displayMember.name}</h3>
-                        <p className="text-gray-800 mb-1">{displayMember.position}</p>
+                        <h3 className="text-lg md:text-xl text-[#491000] font-bold">{displayMember.name}</h3>
+                        <p className="text-sm md:text-base text-gray-800 mb-1">{displayMember.position}</p>
 
                         <div className="flex space-x-3 mb-2">
                             {displayMember.socials?.linkedin && (
@@ -272,7 +272,7 @@ export default function TeamMemberSection() {
                         </div>
 
 
-                        <p className="text-gray-500 text-left text-sm">{displayMember.intro}</p>
+                        <p className="text-gray-500 text-left text-xs md:text-sm">{displayMember.intro}</p>
                     </div>
 
                     {/* Right Panel: Scrollable Team Avatars */}
