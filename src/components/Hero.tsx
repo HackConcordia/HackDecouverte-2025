@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Hero() {
     return (
-        <section className="relative min-h-screen flex flex-col items-center justify-center text-center max-w-7xl mx-auto px-4">
+        <section className="relative mt-10 sm:mt-0 min-h-screen flex flex-col items-center md:justify-center text-center max-w-7xl mx-auto px-4">
 
             {/* Title */}
             <h1 className="relative text-4xl sm:text-6xl md:text-8xl font-extrabold pt-4 lg:pt-6 pb-4
@@ -41,7 +41,7 @@ export default function Hero() {
             </p>
 
             {/* Spacer to push bottom */}
-            <div className="mb-70 md:mb-100 lg:mb-70" />
+            <div className="mb-100 sm:mb-100 md:mb-100 lg:mb-70" />
             <Image
                 src="/images/globe.png"
                 alt="HackConcordia Logo"
@@ -54,7 +54,7 @@ export default function Hero() {
                 alt="HackConcordia Logo"
                 width={280}
                 height={200}
-                className="absolute lg:hidden block bottom-10 right-0 mb-4"
+                className="absolute lg:hidden block bottom-20 right-0 mb-4"
             />
             <Image
                 src="/images/star.png"
@@ -68,7 +68,7 @@ export default function Hero() {
                 alt="HackConcordia Logo"
                 width={100}
                 height={80}
-                className="absolute block lg:hidden bottom-45 left-5 lg:bottom-70 md:left-10 lg:left-45 mb-4"
+                className="absolute block lg:hidden bottom-55 left-5 lg:bottom-70 md:left-10 lg:left-45 mb-4"
             />
             <Image
                 src="/images/stars.png"
