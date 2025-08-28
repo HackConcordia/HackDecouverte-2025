@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import SectionTitle from "./SectionTitle";
 
 const faqs = [
   {
@@ -80,26 +81,29 @@ export default function FAQ() {
   };
 
   return (
-    <section id="faq" className="py-20 bg-white">
-      <h2 className="text-3xl font-bold text-center mb-12">
-        Frequently Asked Questions
-      </h2>
-      <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+    <section id="faq" className="py-20 max-w-7xl mx-auto px-4">
+      <SectionTitle>Frequently Asked Questions</SectionTitle>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
         {faqs.map((faq, idx) => (
           <div
             key={idx}
-            className="border rounded-lg p-6 shadow hover:shadow-lg transition h-fit"
+            className="border-4 border-[#412721] rounded-xs shadow hover:shadow-lg transition h-fit bg-[#FFEC9799]"
           >
             <button
-              className="w-full flex justify-between items-center text-left"
+              className="w-full flex justify-between items-center text-left bg-[#412721] text-white p-4"
               onClick={() => toggleFAQ(idx)}
             >
-              <h3 className="text-lg font-semibold">{faq.question}</h3>
+              <h3 className="text-base lg:text-lg font-semibold">{faq.question}</h3>
               <span className="text-xl">{openIndex === idx ? "−" : "+"}</span>
             </button>
-            {openIndex === idx && (
-              <p className="text-gray-700 mt-3">{faq.answer}</p>
-            )}
+
+            {/* Smooth transition wrapper */}
+            <div
+              className={`overflow-hidden transition-all duration-500 ease-in-out ${openIndex === idx ? "max-h-40 opacity-100" : "max-h-0 opacity-0"
+                }`}
+            >
+              <p className="text-gray-700 px-4 pb-4 pt-2">{faq.answer}</p>
+            </div>
           </div>
         ))}
       </div>
