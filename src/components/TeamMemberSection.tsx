@@ -244,7 +244,7 @@ export default function TeamMemberSection() {
             <section className="relative z-10 flex flex-col justify-center max-w-7xl mx-auto">
                 <div className="flex flex-col-reverse items-start text-white">
                     {/* Left Panel: Displayed Member Details */}
-                    <div className="flex flex-col items-start p-4 border-[#9cccae] border-4 bg-[#ffec97dc] rounded-sm shadow-lg w-full mb-4 h-[166px]">
+                    <div className="flex flex-col items-start p-4 border-[#9cccae] border-4 bg-[#ffec97dc] rounded-sm shadow-lg w-full mb-4 h-[157px]">
                         <h3 className="text-xl text-[#491000] font-bold">{displayMember.name}</h3>
                         <p className="text-gray-800 mb-1">{displayMember.position}</p>
 
