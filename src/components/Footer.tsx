@@ -1,4 +1,7 @@
+import { useTranslations } from "next-intl";
+
 export default function Footer() {
+    const t = useTranslations("footer");
     return (
         <footer className="py-6 text-center bg-[#412721] text-white">
             <p>
@@ -11,7 +14,7 @@ export default function Footer() {
                 >
                     HackConcordia
                 </a>
-                . All rights reserved.
+                . {t("rights")}
             </p>
         </footer>
     );

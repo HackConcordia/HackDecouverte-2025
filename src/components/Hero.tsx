@@ -1,6 +1,8 @@
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 export default function Hero() {
+    const t = useTranslations('HeroSection');
     return (
         <section className="relative mt-10 sm:mt-0 min-h-screen flex flex-col items-center md:justify-center text-center max-w-7xl mx-auto px-4">
 
@@ -14,22 +16,22 @@ export default function Hero() {
 
             {/* Subtitle */}
             <p className="relative text-sm md:text-xl max-w-4xl mb-2 font-bold">
-                A bilingual, beginner-friendly hackathon for pre-university students across Québec.
+                {t("description")}
             </p>
             <p className="relative text-xs md:text-sm lg:text-base mb-4 font-bold px-20 lg:px-0 mt-1 lg:mt-0">
-                November 15, 2025 • Concordia University, Montréal
+                {t("dateAndLocation")}
             </p>
 
             <a
                 href="#register"
                 className="block py-3 px-5 text-center bg-[#491000] text-white font-bold rounded-sm shadow hover:bg-[#320b00] transition"
             >
-                REGISTER NOW
+                {t("registerNow")}
             </a>
 
             {/* HackConcordia credit */}
             <p className="mt-6 lg:mt-4 text-sm sm:text-base text-gray-800">
-                Brought to you by{" "}
+                {t("broughtToYouBy")}{" "}
                 <a
                     href="https://www.hackconcordia.io/"
                     target="_blank"
