@@ -1,88 +1,29 @@
 "use client";
 import { useState } from "react";
 import SectionTitle from "./SectionTitle";
-
-const faqs = [
-  {
-    question: "What is HackDécouverte?",
-    answer:
-      "HackDécouverte is a bilingual, beginner-friendly hackathon for pre-university students across Québec. Participants form teams and build innovative hardware or software prototypes to solve real-world problems.",
-  },
-  {
-    question: "Who can participate?",
-    answer:
-      "Pre-university students (CEGEP and equivalent) from across Québec. No prior hackathon experience is required!",
-  },
-  {
-    question: "Is there a registration fee?",
-    answer: "No, participation is completely free!",
-  },
-  {
-    question: "Do I need prior experience?",
-    answer:
-      "Not at all! HackDécouverte is designed for beginners. We’ll have workshops and mentors to guide you through the process.",
-  },
-  {
-    question: "What is the team size?",
-    answer:
-      "Teams can have up to 5 members. Don’t worry if you don’t have a team—we’ll help you find one during the event.",
-  },
-  {
-    question: "What is the event format?",
-    answer:
-      "The hackathon is in-person at Concordia University. It includes workshops, a campus tour, coding sessions, career talks, fairs, and a final project showcase with prizes.",
-  },
-  {
-    question: "Are meals provided?",
-    answer: "Yes! Breakfast, lunch, and dinner are included during the hackathon.",
-  },
-  {
-    question: "What should I bring?",
-    answer:
-      "Bring your laptop, charger, student ID, and lots of enthusiasm! We’ll provide food, workspace, and WiFi.",
-  },
-  {
-    question: "What can I win?",
-    answer:
-      "Winning teams will be rewarded with prizes, and all participants will gain valuable experience, mentorship, and networking opportunities.",
-  },
-  {
-    question: "Will there be support during the hackathon?",
-    answer:
-      "Yes! Mentors and volunteers will be available to help you with coding, design, and brainstorming throughout the event.",
-  },
-  {
-    question: "How do I register?",
-    answer:
-      "Registration will be available on the HackConcordia website. Keep an eye on our social media for updates.",
-  },
-  {
-    question: "What is HackConcordia?",
-    answer:
-      "HackConcordia is a student-run organization at Concordia University that organizes events like HackDécouverte and ConUHacks, Montréal’s largest student-run hackathon. We aim to foster innovation, collaboration, and learning in the tech community.",
-  },
-  {
-    question: "What other events does HackConcordia run?",
-    answer:
-      "Besides HackDécouverte, HackConcordia hosts ConUHacks (our flagship hackathon), coding workshops, industry panels, and networking events to help students learn and connect with professionals.",
-  },
-  {
-    question: "Can I join HackConcordia?",
-    answer:
-      "Yes! HackConcordia is always looking for passionate students to join as volunteers, organizers, or team members. It's a great way to gain experience, meet people, and contribute to the tech community at Concordia.",
-  },
-];
+import { useTranslation } from "@/i18n/TranslationContext";
 
 export default function FAQ() {
+  const { t } = useTranslation();
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const toggleFAQ = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
+  const faqKeys = Array.from({ length: 14 }, (_, i) => `q${i + 1}`);
+  
+  
+  const faqs = faqKeys.map((key) => ({
+    // @ts-expect-error: We're using dynamic keys that aren't part of the type system
+    question: t(`faq.queries.${key}.question`),
+    // @ts-expect-error: We're using dynamic keys that aren't part of the type system
+    answer: t(`faq.queries.${key}.answer`),
+  }));
+
   return (
     <section id="faq" className="py-20 max-w-7xl mx-auto px-4">
-      <SectionTitle>Frequently Asked Questions</SectionTitle>
+      <SectionTitle>{t("faq.heading")}</SectionTitle>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
         {faqs.map((faq, idx) => (
           <div
@@ -93,14 +34,16 @@ export default function FAQ() {
               className="w-full flex justify-between items-center text-left bg-[#412721] text-white p-4"
               onClick={() => toggleFAQ(idx)}
             >
-              <h3 className="text-base lg:text-lg font-semibold">{faq.question}</h3>
+              <h3 className="text-base lg:text-lg font-semibold">
+                {faq.question}
+              </h3>
               <span className="text-xl">{openIndex === idx ? "−" : "+"}</span>
             </button>
 
-            {/* Smooth transition wrapper */}
             <div
-              className={`overflow-hidden transition-all duration-500 ease-in-out ${openIndex === idx ? "max-h-40 opacity-100" : "max-h-0 opacity-0"
-                }`}
+              className={`overflow-hidden transition-all duration-500 ease-in-out ${
+                openIndex === idx ? "max-h-40 opacity-100" : "max-h-0 opacity-0"
+              }`}
             >
               <p className="text-gray-700 px-4 pb-4 pt-2">{faq.answer}</p>
             </div>
