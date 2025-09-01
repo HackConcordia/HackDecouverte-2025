@@ -31,7 +31,14 @@ export const en = {
   },
   volunteer: {
     title: "Volunteer",
-    description: "Join our volunteer team to help make this event a success!",
+    promo: {
+      heading: "JOIN THE TEAM BEHIND SCENES",
+      body: "Help make our very first edition unforgettable. We're looking for volunteers to support logistics, welcome hackers, and keep the good vibes flowing.",
+      cta: {
+        volunteer: "BECOME A VOLUNTEER",
+        mentor: "BECOME A MENTOR"
+      }
+    }
   },
   faq: {
     title: "FAQ",

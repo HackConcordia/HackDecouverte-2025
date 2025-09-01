@@ -27,7 +27,14 @@ const fr = {
   },
   volunteer: {
     title: "Bénévolat",
-    description: "Rejoignez notre équipe de bénévoles pour faire de cet événement un succès!"
+    promo: {
+      heading: "REJOIGNEZ L'ÉQUIPE EN ARRIÈRE-PLAN",
+      body: "Aidez à rendre notre toute première édition inoubliable. Nous recherchons des bénévoles pour soutenir la logistique, accueillir les hackers et maintenir une bonne ambiance.",
+      cta: {
+        volunteer: "DEVENIR BÉNÉVOLE",
+        mentor: "DEVENIR MENTOR"
+      }
+    }
   },
   faq: {
     title: "FAQ",

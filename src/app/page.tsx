@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import AboutUs from "@/components/AboutUs";
-import Sponsors from "@/components/Sponsors";
+// import Sponsors from "@/components/Sponsors";
 import Volunteer from "@/components/Volunteer";
 import FAQ from "@/components/FAQ";
 
@@ -16,7 +16,8 @@ export default function Home() {
       <main className="pt-16 bg-[#ffec9780]"> {/* offset for fixed header */}
         <Hero />
         <AboutUs />
-        <Sponsors />
+        {/* removed for now will be added in next edition */}
+        {/* <Sponsors /> */}
         <Volunteer />
         <FAQ />
         <Footer />
