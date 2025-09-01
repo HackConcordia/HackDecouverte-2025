@@ -36,7 +36,7 @@ export default function PromoCard({ title, body, cta }: PromoCardProps) {
           className="text-left"
         >
           <p
-            className={`mx-auto text-sm lg:text-lg text-gray-700 ${cta ? "mb-2 lg:mb-6" : ""}`}
+            className={`mx-auto text-sm text-gray-700 ${cta ? "mb-2 lg:mb-6" : ""}`}
             style={{
               padding: "20px",
             }}

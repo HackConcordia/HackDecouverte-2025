@@ -1,20 +1,24 @@
+"use client";
+
+import { useTranslation } from "@/i18n/TranslationContext";
 import PromoCard from "./PromoCard";
 import SectionTitle from "./SectionTitle";
 import TeamMemberSection from "./TeamMemberSection";
 
 export default function AboutUs() {
+    const {t} = useTranslation();
     const cards = [
         {
-            title: "Innovation",
-            description: "Empowering students to create impactful solutions and explore new technologies."
+            title: t("aboutUs.hackathon.question"),
+            description: t("aboutUs.hackathon.answer")
         },
         {
-            title: "Collaboration",
-            description: "Connecting brilliant minds from diverse backgrounds to work on exciting projects."
+            title: t("aboutUs.hackDecouverte.question"),
+            description: t("aboutUs.hackDecouverte.answer")
         },
         {
-            title: "Learning",
-            description: "Providing a platform to grow skills, gain experience, and turn ideas into reality."
+            title: t("aboutUs.hackConcordia.question"),
+            description: t("aboutUs.hackConcordia.answer")
         },
     ];
 
