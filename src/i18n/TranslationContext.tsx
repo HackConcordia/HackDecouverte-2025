@@ -3,8 +3,7 @@
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 import en from '../locales/en';
 import fr from '../locales/fr';
-
-type Language = 'en' | 'fr';
+import { Language } from './types';
 
 const translations = { en, fr };
 
@@ -17,7 +16,7 @@ interface TranslationContextProps {
 const TranslationContext = createContext<TranslationContextProps | undefined>(undefined);
 
 export const TranslationProvider = ({ children }: { children: ReactNode }) => {
-  const [language, setLanguage] = useState<Language>('en');
+  const [language, setLanguage] = useState<Language>(Language.en);
 
   const t = (key: keyof typeof en) => translations[language][key] || key;
 

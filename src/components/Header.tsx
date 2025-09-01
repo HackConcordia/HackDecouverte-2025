@@ -2,6 +2,7 @@
 
 import { useTranslation } from "@/i18n/TranslationContext";
 import Link from "next/link";
+import { Language } from "@/i18n/types";
 
 export default function Header() {
     const { language, setLanguage, t } = useTranslation(); // Added `t` for translations
@@ -28,12 +29,15 @@ export default function Header() {
                         {t("FAQ")}
                     </Link>
                     <div>
-                        <button onClick={() => setLanguage('en')} disabled={language === 'en'}>
-                            {t("English")}
-                        </button>
-                        <button onClick={() => setLanguage('fr')} disabled={language === 'fr'}>
-                            {t("Français")}
-                        </button>
+                        {
+                            language === Language.en ?
+                                <button onClick={() => setLanguage(Language.fr)} style={{ cursor: "pointer" }}>
+                                    FR
+                                </button> :
+                                <button onClick={() => setLanguage(Language.en)} style={{ cursor: "pointer" }}>
+                                    EN
+                                </button>
+                        }
                     </div>
                 </div>
             </nav>
