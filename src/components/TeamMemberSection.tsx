@@ -2,8 +2,6 @@
 
 import { useState } from 'react';
 import { FaLinkedin, FaGithub, FaInstagram, FaGlobe } from "react-icons/fa";
-import { FaArrowRight } from 'react-icons/fa';
-import Link from 'next/link';
 import Image from 'next/image';
 
 export const teamsSectionText = {
@@ -30,17 +28,6 @@ export type TeamMember = {
 export const teamMembers: TeamMember[] = [
     {
         id: 1,
-        name: "Bertin Mihigo Sano",
-        position: "Co-President",
-        intro: "COEN student and co-president of HackConcordia.",
-        imageSrc: "/images/team/Bertin.jpg",
-        socials: {
-            linkedin: "https://www.linkedin.com/in/sanobertin/",
-            github: "https://github.com/sanobertin",
-        }
-    },
-    {
-        id: 2,
         name: "Elizabeth Wong",
         position: "Co-President",
         intro: "Bachelor Computer Science Student with a Joint Major in Data Science student and co-president of HackConcordia.",
@@ -48,6 +35,17 @@ export const teamMembers: TeamMember[] = [
         socials: {
             linkedin: "https://www.linkedin.com/in/e-lizabethwong/",
             github: "https://github.com/e-lizabethwong",
+        }
+    },
+    {
+        id: 2,
+        name: "Bertin Mihigo Sano",
+        position: "Co-President",
+        intro: "COEN student and co-president of HackConcordia.",
+        imageSrc: "/images/team/Bertin.jpg",
+        socials: {
+            linkedin: "https://www.linkedin.com/in/sanobertin/",
+            github: "https://github.com/sanobertin",
         }
     },
     {
@@ -245,8 +243,8 @@ export default function TeamMemberSection() {
                 <div className="flex flex-col-reverse items-start text-white">
                     {/* Left Panel: Displayed Member Details */}
                     <div className="flex flex-col items-start p-4 border-[#9cccae] border-4 bg-[#ffec97dc] rounded-sm shadow-lg w-full mb-4 h-[157px]">
-                        <h3 className="text-lg md:text-xl text-[#491000] font-bold">{displayMember.name}</h3>
-                        <p className="text-sm md:text-base text-gray-800 mb-1">{displayMember.position}</p>
+                        <h3 className="text-lg md:text-lg text-[#491000] font-bold">{displayMember.name}</h3>
+                        <p className="text-sm text-gray-800 mb-1">{displayMember.position}</p>
 
                         <div className="flex space-x-3 mb-2">
                             {displayMember.socials?.linkedin && (
@@ -272,7 +270,7 @@ export default function TeamMemberSection() {
                         </div>
 
 
-                        <p className="text-gray-500 text-left text-xs md:text-sm">{displayMember.intro}</p>
+                        <p className="text-gray-500 text-left text-xs">{displayMember.intro}</p>
                     </div>
 
                     {/* Right Panel: Scrollable Team Avatars */}
@@ -293,7 +291,7 @@ export default function TeamMemberSection() {
                                         style={{
                                             minWidth: hovered?.id === member.id || isSelected ? '250px' : '150px',
                                             maxWidth: '',
-                                            height: '400px',
+                                            height: '350px',
                                         }}
                                     >
                                         <Image
