@@ -20,7 +20,7 @@ interface TranslationContextProps {
 const TranslationContext = createContext<TranslationContextProps | undefined>(undefined);
 
 export const TranslationProvider = ({ children }: { children: ReactNode }) => {
-  const [language, setLanguage] = useState<Language>(Language.en);
+  const [language, setLanguage] = useState<Language>(Language.fr);
 
   const t = (key: TranslationKey): string => {
     const keys = key.split(".");
