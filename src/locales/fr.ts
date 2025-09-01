@@ -1,5 +1,6 @@
 const fr = {
   title: "HackDécouverte",
+  organization: "HackConcordia",
   hero: {
     heading: "HackDécouverte",
     subheading: "Un hackathon bilingue et convivial pour les étudiants préuniversitaires du Québec.",
@@ -97,6 +98,9 @@ const fr = {
         answer: "Oui, nous avons un code de conduite que tous les participants doivent suivre pour garantir un environnement respectueux et inclusif."
       }
     }
+  },
+  footer: {
+    rights: "Tous droits réservés."
   }
 };
 

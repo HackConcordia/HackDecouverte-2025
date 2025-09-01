@@ -1,5 +1,6 @@
 export const en = {
   title: "HackDécouverte",
+  organization: "HackConcordia",
   hero: {
     heading: "HackDécouverte",
     subheading:
@@ -114,6 +115,9 @@ export const en = {
       },
     }
   },
+  footer: {
+    rights: "All rights reserved.",
+  }
 };
 
 export default en;
