@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Archivo_Black } from "next/font/google";
-import "../globals.css";
+import "./globals.css";
 
 const archivoBlack = Archivo_Black({
   weight: "400", // Archivo Black has only one weight

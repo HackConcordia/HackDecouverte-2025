@@ -1,29 +1,26 @@
 import PromoCard from "./PromoCard";
 import SectionTitle from "./SectionTitle";
 import TeamMemberSection from "./TeamMemberSection";
-import { useTranslations } from 'next-intl';
 
 export default function AboutUs() {
-    const t = useTranslations("AboutUsSection");
-
     const cards = [
         {
-            title: t("innovation"),
-            description: t("description1")
+            title: "Innovation",
+            description: "Empowering students to create impactful solutions and explore new technologies."
         },
         {
-            title: t("collaboration"),
-            description: t("description2")
+            title: "Collaboration",
+            description: "Connecting brilliant minds from diverse backgrounds to work on exciting projects."
         },
         {
-            title: t("learning"),
-            description: t("description3")
+            title: "Learning",
+            description: "Providing a platform to grow skills, gain experience, and turn ideas into reality."
         },
     ];
 
     return (
         <section id="about-us" className="flex flex-col items-center justify-center text-center max-w-7xl mx-auto px-4 lg:py-20">
-            <SectionTitle>{t("title")}</SectionTitle>
+            <SectionTitle>About Us</SectionTitle>
 
             <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 mt-8">
                 {/* Left Column: Cards */}
