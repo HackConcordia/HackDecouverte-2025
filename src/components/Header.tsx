@@ -7,11 +7,11 @@ import { usePathname, useRouter } from "next/navigation";
 export default function Header() {
     const pathname = usePathname();
     const router = useRouter();
-    const t = useTranslations("Header");
+    const t = useTranslations("HeaderSection");
 
     // Helper to switch locale
     const switchLocale = (locale: string) => {
-        router.push(`/${locale}${pathname}`);
+        router.push(`/${locale}`);
     };
 
     return (

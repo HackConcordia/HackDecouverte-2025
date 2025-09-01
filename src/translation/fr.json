@@ -1,5 +1,5 @@
 {
-    "Header": {
+    "HeaderSection": {
         "about": "À propos de nous",
         "volunteer": "Bénévolat"
     },
@@ -91,6 +91,12 @@
         },
         "21": {
             "intro": "Étudiante en informatique (BCompSc) passionnée par les nouvelles technologies et la résolution efficace de problèmes."
+        },
+        "22": {
+            "intro": "Étudiante en informatique (BCompSc)"
+        },
+        "23": {
+            "intro": "Étudiant en informatique (BCompSc)"
         }
     },
     "BeASponsorSection": {
@@ -108,65 +114,23 @@
     },
     "FAQSection": {
         "title": "Foire aux questions",
-        "questions": [
-            {
-                "question": "Qu’est-ce que HackDécouverte?",
-                "answer": "HackDécouverte est un hackathon bilingue, accessible aux débutants, destiné aux étudiants préuniversitaires de tout le Québec. Les participants forment des équipes et créent des prototypes matériels ou logiciels innovants pour résoudre des problèmes réels."
-            },
-            {
-                "question": "Qui peut participer?",
-                "answer": "Les étudiants préuniversitaires (cégep et équivalents) de tout le Québec. Aucune expérience préalable en hackathon n’est requise!"
-            },
-            {
-                "question": "Y a-t-il des frais d’inscription?",
-                "answer": "Non, la participation est entièrement gratuite!"
-            },
-            {
-                "question": "Ai-je besoin d’expérience préalable?",
-                "answer": "Pas du tout! HackDécouverte est conçu pour les débutants. Nous aurons des ateliers et des mentors pour t’accompagner tout au long du processus."
-            },
-            {
-                "question": "Quelle est la taille des équipes?",
-                "answer": "Les équipes peuvent compter jusqu’à 5 membres. Ne t’inquiète pas si tu n’as pas encore d’équipe — nous t’aiderons à en trouver une pendant l’événement."
-            },
-            {
-                "question": "Quel est le format de l’événement?",
-                "answer": "Le hackathon se déroule en personne à l’Université Concordia. Il comprend des ateliers, une visite du campus, des séances de programmation, des conférences de carrière, des salons et une présentation finale des projets avec des prix à la clé."
-            },
-            {
-                "question": "Les repas sont-ils fournis?",
-                "answer": "Oui! Le déjeuner, le dîner et le souper sont inclus pendant le hackathon."
-            },
-            {
-                "question": "Que dois-je apporter?",
-                "answer": "Apporte ton ordinateur portable, ton chargeur, ta carte étudiante et beaucoup d’enthousiasme! Nous fournirons la nourriture, l’espace de travail et le WiFi."
-            },
-            {
-                "question": "Que puis-je gagner?",
-                "answer": "Les équipes gagnantes recevront des prix, et tous les participants repartiront avec une expérience précieuse, du mentorat et des opportunités de réseautage."
-            },
-            {
-                "question": "Y aura-t-il du soutien pendant le hackathon?",
-                "answer": "Oui! Des mentors et des bénévoles seront disponibles pour t’aider en programmation, en design et en idéation tout au long de l’événement."
-            },
-            {
-                "question": "Comment puis-je m’inscrire?",
-                "answer": "L’inscription sera disponible sur le site web de HackConcordia. Reste à l’affût de nos réseaux sociaux pour les mises à jour."
-            },
-            {
-                "question": "Qu’est-ce que HackConcordia?",
-                "answer": "HackConcordia est une organisation étudiante de l’Université Concordia qui organise des événements comme HackDécouverte et ConUHacks, le plus grand hackathon étudiant de Montréal. Notre mission est de promouvoir l’innovation, la collaboration et l’apprentissage au sein de la communauté technologique."
-            },
-            {
-                "question": "Quels autres événements HackConcordia organise-t-il?",
-                "answer": "En plus de HackDécouverte, HackConcordia organise ConUHacks (notre hackathon), des ateliers de programmation, des panels avec l’industrie et des événements de réseautage pour aider les étudiants à apprendre et à se connecter avec des professionnels."
-            },
-            {
-                "question": "Puis-je rejoindre HackConcordia?",
-                "answer": "Oui! HackConcordia recherche toujours des étudiants passionnés pour devenir bénévoles, organisateurs ou membres de l’équipe. C’est une excellente façon d’acquérir de l’expérience, de rencontrer du monde et de contribuer à la communauté technologique de Concordia."
-            }
-        ]
-    }, 
+        "questions": {
+            "0": {"question": "Qu’est-ce que HackDécouverte?", "answer": "HackDécouverte est un hackathon bilingue, accessible aux débutants, destiné aux étudiants préuniversitaires de tout le Québec. Les participants forment des équipes et créent des prototypes matériels ou logiciels innovants pour résoudre des problèmes réels."},
+            "1": {"question": "Qui peut participer?", "answer": "Les étudiants préuniversitaires (cégep et équivalents) de tout le Québec. Aucune expérience préalable en hackathon n’est requise!"},
+            "2": {"question": "Y a-t-il des frais d’inscription?", "answer": "Non, la participation est entièrement gratuite!"},
+            "3": {"question": "Ai-je besoin d’expérience préalable?", "answer": "Pas du tout! HackDécouverte est conçu pour les débutants. Nous aurons des ateliers et des mentors pour t’accompagner tout au long du processus."},
+            "4": {"question": "Quelle est la taille des équipes?", "answer": "Les équipes peuvent compter jusqu’à 5 membres. Ne t’inquiète pas si tu n’as pas encore d’équipe — nous t’aiderons à en trouver une pendant l’événement."},
+            "5": {"question": "Quel est le format de l’événement?", "answer": "Le hackathon se déroule en personne à l’Université Concordia. Il comprend des ateliers, une visite du campus, des séances de programmation, des conférences de carrière, des salons et une présentation finale des projets avec des prix à la clé."},
+            "6": {"question": "Les repas sont-ils fournis?", "answer": "Oui! Le déjeuner, le dîner et le souper sont inclus pendant le hackathon."},
+            "7": {"question": "Que dois-je apporter?", "answer": "Apporte ton ordinateur portable, ton chargeur, ta carte étudiante et beaucoup d’enthousiasme! Nous fournirons la nourriture, l’espace de travail et le WiFi."},
+            "8": {"question": "Que puis-je gagner?", "answer": "Les équipes gagnantes recevront des prix, et tous les participants repartiront avec une expérience précieuse, du mentorat et des opportunités de réseautage."},
+            "9": {"question": "Y aura-t-il du soutien pendant le hackathon?", "answer": "Oui! Des mentors et des bénévoles seront disponibles pour t’aider en programmation, en design et en idéation tout au long de l’événement."},
+            "10": {"question": "Comment puis-je m’inscrire?", "answer": "L’inscription sera disponible sur le site web de HackConcordia. Reste à l’affût de nos réseaux sociaux pour les mises à jour."},
+            "11": {"question": "Qu’est-ce que HackConcordia?", "answer": "HackConcordia est une organisation étudiante de l’Université Concordia qui organise des événements comme HackDécouverte et ConUHacks, le plus grand hackathon étudiant de Montréal. Notre mission est de promouvoir l’innovation, la collaboration et l’apprentissage au sein de la communauté technologique."},
+            "12": {"question": "Quels autres événements HackConcordia organise-t-il?", "answer": "En plus de HackDécouverte, HackConcordia organise ConUHacks (notre hackathon), des ateliers de programmation, des panels avec l’industrie et des événements de réseautage pour aider les étudiants à apprendre et à se connecter avec des professionnels."},
+            "13": {"question": "Puis-je rejoindre HackConcordia?", "answer": "Oui! HackConcordia recherche toujours des étudiants passionnés pour devenir bénévoles, organisateurs ou membres de l’équipe. C’est une excellente façon d’acquérir de l’expérience, de rencontrer du monde et de contribuer à la communauté technologique de Concordia."}
+        }
+    },
     "footer": {
         "rights": "Tous droits réservés."
     }

@@ -1,6 +1,10 @@
+
 import type { Metadata } from "next";
 import { Archivo_Black } from "next/font/google";
 import "../globals.css";
+import { NextIntlClientProvider } from "next-intl";
+import enMessages from "@/translation/en.json";
+import frMessages from "@/translation/fr.json";
 
 const archivoBlack = Archivo_Black({
   weight: "400", // Archivo Black has only one weight
@@ -59,15 +63,31 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+
+export default async function RootLayout({
   children,
+  params
 }: Readonly<{
   children: React.ReactNode;
+  params: { locale: string }
 }>) {
+  const { locale } = await params;
+  let messages;
+  switch (locale) {
+    case "fr":
+      messages = frMessages;
+      break;
+    case "en":
+    default:
+      messages = enMessages;
+      break;
+  }
   return (
-    <html lang="en">
-       <body className={`${archivoBlack.variable} antialiased`}>
-        {children}
+    <html lang={locale}>
+      <body className={`${archivoBlack.variable} antialiased`}>
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          {children}
+        </NextIntlClientProvider>
       </body>
     </html>
   );

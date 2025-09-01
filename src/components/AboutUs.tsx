@@ -5,7 +5,6 @@ import { useTranslations } from 'next-intl';
 
 export default function AboutUs() {
     const t = useTranslations("AboutUsSection");
-
     const cards = [
         {
             title: t("innovation"),

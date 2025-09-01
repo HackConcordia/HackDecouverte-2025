@@ -3,14 +3,12 @@ import { useState } from "react";
 import SectionTitle from "./SectionTitle";
 import { useTranslations } from "next-intl";
 
-
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const t = useTranslations("FAQSection");
-  const faqsRaw = t("questions");
-  const faqs: Array<{ question: string; answer: string }> = Array.isArray(faqsRaw)
-    ? faqsRaw
-    : [];
+  // Use t.raw to get the questions object, then convert to array
+  const faqsObj = t.raw("questions") as Record<string, { question: string; answer: string }>;
+  const faqs: Array<{ question: string; answer: string }> = Object.values(faqsObj);
 
   const toggleFAQ = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);

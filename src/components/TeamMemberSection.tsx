@@ -240,7 +240,7 @@ export const teamMembers: TeamMember[] = [
         socials: {
             linkedin: "https://www.linkedin.com/in/steven-lam12/"
         }
-    },
+    }, 
     {
         id: 21,
         name: "Marilyne Nguyen",
@@ -250,6 +250,26 @@ export const teamMembers: TeamMember[] = [
         socials: {
             linkedin: "https://www.linkedin.com/in/marilyne-nguyen1515/",
             github: "https://github.com/marilynenguyen"
+        }
+    }, 
+    {
+        id: 22,
+        name: "Hajar Blahmam",
+        positionKey: "eventsDirector",
+        introKey: "22.intro",
+        imageSrc: "/images/team/Hajar.jpg",
+        socials: {
+            linkedin: "https://www.linkedin.com/in/hblahmam721/"
+        }
+    }, 
+    {
+        id: 23,
+        name: "Toby Fischer",
+        positionKey: "logisticsDirector",
+        introKey: "23.intro",
+        imageSrc: "/images/team/Toby.jpg",
+        socials: {
+            linkedin: ""
         }
     }
 ];
