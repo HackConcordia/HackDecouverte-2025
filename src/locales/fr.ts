@@ -23,6 +23,122 @@ const fr = {
       answer: "HackConcordia est une organisation dirigée par des étudiants à l'Université Concordia qui vise à favoriser l'innovation et la collaboration entre les étudiants."
     }
   },
+  team: {
+    title: "Rencontrez l'équipe",
+    members: {
+      1: {
+        name: "Elizabeth Wong",
+        position: "Co-Présidente",
+        intro:
+          "Étudiante en informatique avec une double majeure en science des données et co-présidente de HackConcordia.",
+      },
+      2: {
+        name: "Bertin Mihigo Sano",
+        position: "Co-Président",
+        intro: "Étudiant en COEN et co-président de HackConcordia.",
+      },
+      3: {
+        name: "Mohammed Huzaifa",
+        position: "Vice-Président de la Technologie",
+        intro:
+          "Étudiant en maîtrise en informatique appliquée passionné par le développement full-stack et la création de solutions technologiques impactantes.",
+      },
+      4: {
+        name: "Masoumeh Farokhpour (Maryam)",
+        position: "Directrice de la Technologie",
+        intro:
+          "Étudiante en MACS avec un fort intérêt pour le développement logiciel innovant et les projets technologiques collaboratifs.",
+      },
+      5: {
+        name: "Sabine Hleiss",
+        position: "Directrice des Partenariats",
+        intro:
+          "Étudiante en COEN engagée à favoriser des partenariats solides et des relations avec les sponsors pour des événements impactants.",
+      },
+      6: {
+        name: "Matthew Lucas Santiago",
+        position: "Directeur Marketing",
+        intro:
+          "Étudiant en SOEN avec une volonté de communication et de sensibilisation percutantes.",
+      },
+      7: {
+        name: "Elba Lucia Jimenez",
+        position: "Vice-Présidente Marketing",
+        intro:
+          "Étudiante en informatique dédiée à la promotion des événements et à la création de liens communautaires dynamiques.",
+      },
+      8: {
+        name: "Johnny Dang",
+        position: "Directeur de la Technologie",
+        intro:
+          "Étudiant en SOEN intéressé par les technologies de pointe et la résolution efficace de problèmes.",
+      },
+      9: {
+        name: "Christina Alexandrakis",
+        position: "Directrice Marketing",
+        intro:
+          "Étudiante en SOEN passionnée par les campagnes marketing créatives et l'engagement communautaire.",
+      },
+      10: {
+        name: "Louay Helou",
+        position: "Directeur de la Technologie",
+        intro: "Étudiant en informatique passionné par le codage.",
+      },
+      11: {
+        name: "Valeria Rosca",
+        position: "Directrice des Partenariats",
+        intro:
+          "Étudiante en SOEN passionnée par la connexion avec les partenaires et la création de collaborations mutuellement bénéfiques.",
+      },
+      12: {
+        name: "Mohamad Addasi",
+        position: "Directeur de la Technologie",
+        intro:
+          "Étudiant en SOEN concentré sur l'ingénierie logicielle évolutive, efficace et les technologies émergentes.",
+      },
+      13: {
+        name: "Tiffany Andriamiharimanana",
+        position: "Directrice de la Technologie",
+        intro:
+          "Étudiante en SOEN passionnée par le développement logiciel et les communautés technologiques inclusives.",
+      },
+      14: {
+        name: "Mridani Kashyap (Dani)",
+        position: "Directrice Marketing",
+        intro:
+          "Étudiante en marketing passionnée par la narration créative et l'engagement du public.",
+      },
+      15: {
+        name: "Alisa Ignatina",
+        position: "Directrice des Événements",
+        intro:
+          "Étudiante en science des données passionnée par la conception d'expériences engageantes et mémorables pour les participants.",
+      },
+      16: {
+        name: "Huseyin Pilavci",
+        position: "Directeur de la Logistique",
+        intro:
+          "Étudiant en informatique dédié à la planification fluide des événements et à l'efficacité opérationnelle.",
+      },
+      17: {
+        name: "Janani Thiyagarajah",
+        position: "Directrice Marketing",
+        intro:
+          "Étudiante en génie industriel axée sur des stratégies de marque impactantes et la sensibilisation.",
+      },
+      18: {
+        name: "Mijan Ullah",
+        position: "Directeur de la Technologie",
+        intro: "Étudiant en SOEN concentré sur le développement backend.",
+      },
+      19: {
+        name: "Subaanky Krishnapillai",
+        position: "Directeur des Partenariats",
+        intro:
+          "Étudiant en SOEN travaillant à renforcer les relations d'entreprise et assurer le succès de l'événement.",
+      },
+    },
+  },
   sponsors: {
     title: "Nos sponsors",
   },

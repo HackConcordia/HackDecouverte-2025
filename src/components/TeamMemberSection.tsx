@@ -3,15 +3,9 @@
 import { useState } from 'react';
 import { FaLinkedin, FaGithub, FaInstagram, FaGlobe } from "react-icons/fa";
 import Image from 'next/image';
+import { useTranslation } from '@/i18n/TranslationContext';
 
-export const teamsSectionText = {
-    title: "Hive keepers",
-    description: "Meet the dedicated team behind Conuhacks, working tirelessly to bring you the best hackathon experience.",
-    legacyTeams: "Legacy Teams",
-
-}
-
-export type TeamMember = {
+type TeamMember = {
     id: number;
     name: string;
     position: string;
@@ -25,212 +19,214 @@ export type TeamMember = {
     };
 };
 
-export const teamMembers: TeamMember[] = [
+const teamMembers: TeamMember[] = [
     {
         id: 1,
         name: "Elizabeth Wong",
-        position: "Co-President",
-        intro: "Bachelor Computer Science Student with a Joint Major in Data Science student and co-president of HackConcordia.",
+        position: "team.members.1.position",
+        intro: "team.members.1.intro",
         imageSrc: "/images/team/liz.jpg",
         socials: {
             linkedin: "https://www.linkedin.com/in/e-lizabethwong/",
             github: "https://github.com/e-lizabethwong",
-        }
+        },
     },
     {
         id: 2,
         name: "Bertin Mihigo Sano",
-        position: "Co-President",
-        intro: "COEN student and co-president of HackConcordia.",
+        position: "team.members.2.position",
+        intro: "team.members.2.intro",
         imageSrc: "/images/team/Bertin.jpg",
         socials: {
             linkedin: "https://www.linkedin.com/in/sanobertin/",
             github: "https://github.com/sanobertin",
-        }
+        },
     },
     {
         id: 3,
         name: "Mohammed Huzaifa",
-        position: "Vice President of Technology",
-        intro: "Master of Applied Computer Science student passionate about full-stack development and building impactful tech solutions.",
+        position: "team.members.3.position",
+        intro: "team.members.3.intro",
         imageSrc: "/images/team/mohammed_huzaifa.jpg",
         socials: {
             linkedin: "https://www.linkedin.com/in/huzaifa-anjum/",
             github: "https://github.com/mhuzaifa",
             instagram: "https://www.instagram.com/_huzaifaanjum_/",
-            website: "https://huzaifaanjumportfolio.web.app/"
-        }
+            website: "https://huzaifaanjumportfolio.web.app/",
+        },
     },
     {
         id: 4,
         name: "Masoumeh Farokhpour (Maryam)",
-        position: "Director of Technology",
-        intro: "MACS student with a strong interest in innovative software development and collaborative tech projects.",
+        position: "team.members.4.position",
+        intro: "team.members.4.intro",
         imageSrc: "/images/team/masoumeh_farokhpour.jpg",
         socials: {
             linkedin: "https://linkedin.com/in/masoumeh-farokhpour",
             github: "https://github.com/MasoumehF",
-            instagram: "https://www.instagram.com/themaryaam"
-        }
+            instagram: "https://www.instagram.com/themaryaam",
+        },
     },
     {
         id: 5,
         name: "Sabine Hleiss",
-        position: "Director of Sponsorship",
-        intro: "COEN student committed to fostering strong partnerships and sponsor relationships for impactful events.",
+        position: "team.members.5.position",
+        intro: "team.members.5.intro",
         imageSrc: "/images/team/sabine_hleiss.jpg",
         socials: {
-            linkedin: "https://www.linkedin.com/in/sabinehleiss/"
-        }
+            linkedin: "https://www.linkedin.com/in/sabinehleiss/",
+        },
     },
     {
         id: 6,
         name: "Matthew Lucas Santiago",
-        position: "Director of Marketing",
-        intro: "SOEN student with a drive for impactful communication and outreach.",
+        position: "team.members.6.position",
+        intro: "team.members.6.intro",
         imageSrc: "/images/team/matthew_lucas_santiago.jpg",
         socials: {
-            linkedin: "https://www.linkedin.com/in/matthew-lucas-santiago"
-        }
+            linkedin: "https://www.linkedin.com/in/matthew-lucas-santiago",
+        },
     },
     {
         id: 7,
         name: "Elba Lucia Jimenez",
-        position: "Vice President of Marketing",
-        intro: "CompSci student dedicated to promoting events and creating vibrant community connections.",
+        position: "team.members.7.position",
+        intro: "team.members.7.intro",
         imageSrc: "/images/team/elba_lucia_jimenez.jpg",
         socials: {
-            linkedin: "https://www.linkedin.com/in/elba-lucia-jimenez-296b0b152/"
-        }
+            linkedin: "https://www.linkedin.com/in/elba-lucia-jimenez-296b0b152/",
+        },
     },
     {
         id: 8,
         name: "Johnny Dang",
-        position: "Director of Technology",
-        intro: "SOEN student with an interest in cutting-edge technologies and efficient problem-solving.",
+        position: "team.members.8.position",
+        intro: "team.members.8.intro",
         imageSrc: "/images/team/johnny_dang.jpg",
         socials: {
-            linkedin: "https://www.linkedin.com/in/johnnydang22/"
-        }
+            linkedin: "https://www.linkedin.com/in/johnnydang22/",
+        },
     },
     {
         id: 9,
         name: "Christina Alexandrakis",
-        position: "Director of Marketing",
-        intro: "SOEN student passionate about creative marketing campaigns and community engagement.",
+        position: "team.members.9.position",
+        intro: "team.members.9.intro",
         imageSrc: "/images/team/christina_alexandrakis.jpg",
         socials: {
-            linkedin: "https://www.linkedin.com/in/christina-alexandrakis-2590b2338"
-        }
+            linkedin: "https://www.linkedin.com/in/christina-alexandrakis-2590b2338",
+        },
     },
     {
         id: 10,
         name: "Louay Helou",
-        position: "Director of Technology",
-        intro: "BCompSc student passionate about Coding.",
+        position: "team.members.10.position",
+        intro: "team.members.10.intro",
         imageSrc: "/images/team/Louay.jpg",
         socials: {
-            linkedin: "https://www.linkedin.com/in/christina-alexandrakis-2590b2338"
-        }
+            linkedin: "https://www.linkedin.com/in/christina-alexandrakis-2590b2338",
+        },
     },
     {
         id: 11,
         name: "Valeria Rosca",
-        position: "Director of Sponsorship",
-        intro: "SOEN student with a passion for connecting with partners and creating mutually beneficial collaborations.",
+        position: "team.members.11.position",
+        intro: "team.members.11.intro",
         imageSrc: "/images/team/valeria_rosca.jpg",
         socials: {
-            linkedin: "https://www.linkedin.com/in/valeria-rosca"
-        }
+            linkedin: "https://www.linkedin.com/in/valeria-rosca",
+        },
     },
     {
         id: 12,
         name: "Mohamad Addasi",
-        position: "Director of Technology",
-        intro: "SOEN student focused on scalable, efficient software engineering and emerging technologies.",
+        position: "team.members.12.position",
+        intro: "team.members.12.intro",
         imageSrc: "/images/team/mohamad_addasi.jpg",
         socials: {
             linkedin: "https://linkedin.com/in/mohamad-addasi",
-            github: "https://github.com/Moe1177"
-        }
+            github: "https://github.com/Moe1177",
+        },
     },
     {
         id: 13,
         name: "Tiffany Andriamiharimanana",
-        position: "Director of Technology",
-        intro: "SOEN student passionate about software development and inclusive tech communities.",
+        position: "team.members.13.position",
+        intro: "team.members.13.intro",
         imageSrc: "/images/team/tiffany_andriamiharimanana.jpg",
         socials: {
-            linkedin: "https://www.linkedin.com/in/tiffany-soa-andriamiharimanana/"
-        }
+            linkedin: "https://www.linkedin.com/in/tiffany-soa-andriamiharimanana/",
+        },
     },
     {
         id: 14,
         name: "Mridani Kashyap (Dani)",
-        position: "Director of Marketing",
-        intro: "Marketing student passionate about creative storytelling and audience engagement.",
+        position: "team.members.14.position",
+        intro: "team.members.14.intro",
         imageSrc: "/images/team/mridani_kashyap.jpg",
         socials: {
-            linkedin: "https://www.linkedin.com/in/mridani-kashyap"
-        }
+            linkedin: "https://www.linkedin.com/in/mridani-kashyap",
+        },
     },
     {
         id: 15,
         name: "Alisa Ignatina",
-        position: "Director of Events",
-        intro: "Data Science student passionate about designing engaging, memorable experiences for participants.",
+        position: "team.members.15.position",
+        intro: "team.members.15.intro",
         imageSrc: "/images/team/alisa_ignatina.jpg",
         socials: {
             linkedin: "https://www.linkedin.com/in/alisa-ignatina",
             github: "https://github.com/alisaign",
-            instagram: "https://www.instagram.com/alisaa_ign?igsh=dDRpcW0ydmI0d2Fp"
-        }
+            instagram: "https://www.instagram.com/alisaa_ign?igsh=dDRpcW0ydmI0d2Fp",
+        },
     },
     {
         id: 16,
         name: "Huseyin Pilavci",
-        position: "Director of Logistics",
-        intro: "BCompSc student dedicated to seamless event planning and operational efficiency.",
+        position: "team.members.16.position",
+        intro: "team.members.16.intro",
         imageSrc: "/images/team/huseyin_pilavci.jpg",
         socials: {
-            linkedin: "https://www.linkedin.com/in/huseyin-pilavci"
-        }
+            linkedin: "https://www.linkedin.com/in/huseyin-pilavci",
+        },
     },
     {
         id: 17,
         name: "Janani Thiyagarajah",
-        position: "Director of Marketing",
-        intro: "Industrial Engineering student focused on impactful brand strategies and outreach.",
+        position: "team.members.17.position",
+        intro: "team.members.17.intro",
         imageSrc: "/images/team/janani_thiyagarajah.jpg",
         socials: {
-            linkedin: "https://www.linkedin.com/in/janani-thiyagarajah"
-        }
+            linkedin: "https://www.linkedin.com/in/janani-thiyagarajah",
+        },
     },
     {
         id: 18,
         name: "Mijan Ullah",
-        position: "Director of Technology",
-        intro: "SOEN student focused on backend development.",
+        position: "team.members.18.position",
+        intro: "team.members.18.intro",
         imageSrc: "/images/team/mijan.jpg",
         socials: {
             linkedin: "https://www.linkedin.com/in/mijan-ullah-4b99b3298/",
             github: "https://github.com/mijanullah12",
-        }
+        },
     },
     {
         id: 19,
         name: "Subaanky Krishnapillai",
-        position: "Director of Sponsorship",
-        intro: "SOEN student working to strengthen corporate relationships and ensure event success.",
+        position: "team.members.19.position",
+        intro: "team.members.19.intro",
         imageSrc: "/images/team/subaanky_krishnapillai.jpg",
         socials: {
             linkedin: "https://www.linkedin.com/in/subaankykrishnapillai",
-            github: "http://github.com/Subaanky"
-        }
-    }
+            github: "http://github.com/Subaanky",
+        },
+    },
 ];
 
+
 export default function TeamMemberSection() {
+    const { t } = useTranslation();
     const [selected, setSelected] = useState<TeamMember>(teamMembers[0]);
     const [hovered, setHovered] = useState<TeamMember | null>(null);
 
@@ -244,7 +240,7 @@ export default function TeamMemberSection() {
                     {/* Left Panel: Displayed Member Details */}
                     <div className="flex flex-col items-start p-4 border-[#9cccae] border-4 bg-[#ffec97dc] rounded-sm shadow-lg w-full mb-4 h-[157px]">
                         <h3 className="text-lg md:text-lg text-[#491000] font-bold">{displayMember.name}</h3>
-                        <p className="text-sm text-gray-800 mb-1">{displayMember.position}</p>
+                        <p className="text-sm text-gray-800 mb-1">{t(displayMember.position)}</p>
 
                         <div className="flex space-x-3 mb-2">
                             {displayMember.socials?.linkedin && (
@@ -270,7 +266,7 @@ export default function TeamMemberSection() {
                         </div>
 
 
-                        <p className="text-gray-500 text-left text-xs">{displayMember.intro}</p>
+                        <p className="text-gray-500 text-left text-xs">{t(displayMember.intro)}</p>
                     </div>
 
                     {/* Right Panel: Scrollable Team Avatars */}

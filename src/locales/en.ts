@@ -27,6 +27,123 @@ export const en = {
         "HackConcordia is a student-run organization at Concordia University that aims to foster innovation and collaboration among students.",
     },
   },
+  team: {
+    title: "Meet the Team",
+    members: {
+      1: {
+        name: "Elizabeth Wong",
+        position: "Co-President",
+        intro:
+          "Bachelor Computer Science Student with a Joint Major in Data Science student and co-president of HackConcordia.",
+      },
+      2: {
+        name: "Bertin Mihigo Sano",
+        position: "Co-President",
+        intro: "COEN student and co-president of HackConcordia.",
+      },
+      3: {
+        name: "Mohammed Huzaifa",
+        position: "Vice President of Technology",
+        intro:
+          "Master of Applied Computer Science student passionate about full-stack development and building impactful tech solutions.",
+      },
+      4: {
+        name: "Masoumeh Farokhpour (Maryam)",
+        position: "Director of Technology",
+        intro:
+          "MACS student with a strong interest in innovative software development and collaborative tech projects.",
+      },
+      5: {
+        name: "Sabine Hleiss",
+        position: "Director of Sponsorship",
+        intro:
+          "COEN student committed to fostering strong partnerships and sponsor relationships for impactful events.",
+      },
+      6: {
+        name: "Matthew Lucas Santiago",
+        position: "Director of Marketing",
+        intro:
+          "SOEN student with a drive for impactful communication and outreach.",
+      },
+      7: {
+        name: "Elba Lucia Jimenez",
+        position: "Vice President of Marketing",
+        intro:
+          "CompSci student dedicated to promoting events and creating vibrant community connections.",
+      },
+      8: {
+        name: "Johnny Dang",
+        position: "Director of Technology",
+        intro:
+          "SOEN student with an interest in cutting-edge technologies and efficient problem-solving.",
+      },
+      9: {
+        name: "Christina Alexandrakis",
+        position: "Director of Marketing",
+        intro:
+          "SOEN student passionate about creative marketing campaigns and community engagement.",
+      },
+      10: {
+        name: "Louay Helou",
+        position: "Director of Technology",
+        intro: "BCompSc student passionate about Coding.",
+      },
+      11: {
+        name: "Valeria Rosca",
+        position: "Director of Sponsorship",
+        intro:
+          "SOEN student with a passion for connecting with partners and creating mutually beneficial collaborations.",
+      },
+      12: {
+        name: "Mohamad Addasi",
+        position: "Director of Technology",
+        intro:
+          "SOEN student focused on scalable, efficient software engineering and emerging technologies.",
+      },
+      13: {
+        name: "Tiffany Andriamiharimanana",
+        position: "Director of Technology",
+        intro:
+          "SOEN student passionate about software development and inclusive tech communities.",
+      },
+      14: {
+        name: "Mridani Kashyap (Dani)",
+        position: "Director of Marketing",
+        intro:
+          "Marketing student passionate about creative storytelling and audience engagement.",
+      },
+      15: {
+        name: "Alisa Ignatina",
+        position: "Director of Events",
+        intro:
+          "Data Science student passionate about designing engaging, memorable experiences for participants.",
+      },
+      16: {
+        name: "Huseyin Pilavci",
+        position: "Director of Logistics",
+        intro:
+          "BCompSc student dedicated to seamless event planning and operational efficiency.",
+      },
+      17: {
+        name: "Janani Thiyagarajah",
+        position: "Director of Marketing",
+        intro:
+          "Industrial Engineering student focused on impactful brand strategies and outreach.",
+      },
+      18: {
+        name: "Mijan Ullah",
+        position: "Director of Technology",
+        intro: "SOEN student focused on backend development.",
+      },
+      19: {
+        name: "Subaanky Krishnapillai",
+        position: "Director of Sponsorship",
+        intro:
+          "SOEN student working to strengthen corporate relationships and ensure event success.",
+      },
+    },
+  },
+
   sponsors: {
     title: "Sponsors",
   },
