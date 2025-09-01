@@ -14,27 +14,27 @@ export default function Hero() {
                             mb-6 tracking-tight drop-shadow-lg w-full
                             border-t-4 border-b-4 border-[#D00000] text-[#491000]
                             font-['Archivo Black']">
-                {t("HackDécouverte")}
+                {t("title")}
             </h1>
 
             {/* Subtitle */}
             <p className="relative text-sm md:text-xl max-w-4xl mb-2 font-bold">
-                {t("A bilingual, beginner-friendly hackathon for pre-university students across Québec.")}
+                {t("hero.subheading")}
             </p>
             <p className="relative text-xs md:text-sm lg:text-base mb-4 font-bold px-20 lg:px-0 mt-1 lg:mt-0">
-                {t("November 15, 2025 • Concordia University, Montréal")}
+                {t("hero.event")}
             </p>
 
             <a
                 href="#register"
                 className="block py-3 px-5 text-center bg-[#491000] text-white font-bold rounded-sm shadow hover:bg-[#320b00] transition"
             >
-                {t("REGISTER NOW")}
+                {t("hero.register")}
             </a>
 
             {/* HackConcordia credit */}
             <p className="mt-6 lg:mt-4 text-sm sm:text-base text-gray-800">
-                {t("Brought to you by")}{" "}
+                {t("hero.organizer")}{" "}
                 <a
                     href="https://www.hackconcordia.io/"
                     target="_blank"
