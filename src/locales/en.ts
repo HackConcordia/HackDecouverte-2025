@@ -141,6 +141,30 @@ export const en = {
         intro:
           "SOEN student working to strengthen corporate relationships and ensure event success.",
       },
+           20: {
+        name: "Steven Lam",
+        position: "Director of Sponsorship",
+        intro:
+          "Computer Science student passionate about creating partnerships and community engagement.",
+      },
+      21: {
+        name: "Marilyne Nguyen",
+        position: "Director of Technology",
+        intro:
+          "Computer Science student passionate about new technologies and efficient problem-solving.",
+      },
+      22: {
+        name: "Hajar Blahmam",
+        position: "Director of Events",
+        intro:
+          "Computer Science student",
+      },
+      23: {
+        name: "Toby Fischer",
+        position: "Director of Logistics",
+        intro:
+          "Computer Science student",
+      },
     },
   },
 
