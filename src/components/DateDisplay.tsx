@@ -71,7 +71,7 @@ const DateDisplay = ({ startDate, endDate } : any) => {
         href={`https://www.google.com/calendar/render?action=TEMPLATE&text=HackDecouverte+2025&dates=${startISODate}/${endISODate}&details=Join+us+for+HackDecouverte!+Watch+our+social+media+platforms+and+emails+for+more+details.`}
         target='_blank'
         rel='noopener noreferrer'
-        className={`hover:scale-105 active:scale-95 duration-300 group animate-fade-in-2 flex gap-1 items-center justify-center w-fit transition-all border-2 border-[#491000] text-[#491000] font-bold hover:bg-[#320b00] py-2 px-3 rounded-sm text-xs mt-4`}
+        className={`hover:scale-105 active:scale-95 duration-300 group animate-fade-in-2 flex gap-1 items-center justify-center w-fit transition-all border-2 border-[#491000] text-[#491000] font-bold hover:bg-[#320b00] hover:text-white py-2 px-3 rounded-sm text-xs mt-4`}
       >
         Add to calendar
         <FaRegCalendarPlus className='text-sm opacity-70 transition-all group-hover:translate-x-1' />
