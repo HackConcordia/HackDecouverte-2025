@@ -2,9 +2,17 @@
 
 import Image from "next/image";
 import { useTranslation } from "@/i18n/TranslationContext";
+import { config } from "process";
+import Countdown from "./Countdown";
+import DateDisplay from "./DateDisplay";
 
 export default function Hero() {
     const { t } = useTranslation();
+    const config = {
+        title: 'HackDecouverte',
+        eventStartDate: '2025-11-15T08:00:00',
+        eventEndDate: '2025-11-15T19:00:00',
+      };
 
     return (
         <section className="relative mt-10 sm:mt-0 min-h-screen flex flex-col items-center md:justify-center text-center max-w-7xl mx-auto px-4">
@@ -31,6 +39,13 @@ export default function Hero() {
             >
                 {t("hero.register")}
             </a>
+
+            {/* Countdown */}
+            <Countdown targetDate={config.eventStartDate} />
+          <DateDisplay
+            startDate={config.eventStartDate}
+            endDate={config.eventEndDate}
+          />
 
             {/* HackConcordia credit */}
             <p className="mt-6 lg:mt-4 text-sm sm:text-base text-gray-800">
