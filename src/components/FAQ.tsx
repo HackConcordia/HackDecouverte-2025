@@ -15,9 +15,7 @@ export default function FAQ() {
   
   
   const faqs = faqKeys.map((key) => ({
-    // @ts-expect-error: We're using dynamic keys that aren't part of the type system
     question: t(`faq.queries.${key}.question`),
-    // @ts-expect-error: We're using dynamic keys that aren't part of the type system
     answer: t(`faq.queries.${key}.answer`),
   }));
 
