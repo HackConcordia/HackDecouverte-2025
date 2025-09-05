@@ -6,23 +6,30 @@ import fr from "../locales/fr";
 import { Language } from "./types";
 import { NestedKeyOf } from "./utils";
 
+// Merge all translations
 const translations = { en, fr };
 
+// Infer the structure of a translation object
 type TranslationObject = typeof en;
+
+// Create a union of all nested keys like "home.title", "auth.login.button", etc.
 type TranslationKey = NestedKeyOf<TranslationObject>;
 
+// Define context props
 interface TranslationContextProps {
   language: Language;
   setLanguage: (lang: Language) => void;
-  t: (key: TranslationKey) => string;
+  t: (key: TranslationKey | string) => string; // Accept both known keys and arbitrary strings
 }
 
+// Create context
 const TranslationContext = createContext<TranslationContextProps | undefined>(undefined);
 
+// Provider component
 export const TranslationProvider = ({ children }: { children: ReactNode }) => {
   const [language, setLanguage] = useState<Language>(Language.fr);
 
-  const t = (key: TranslationKey): string => {
+  const t = (key: TranslationKey | string): string => {
     const keys = key.split(".");
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     let value: any = translations[language];
@@ -45,6 +52,7 @@ export const TranslationProvider = ({ children }: { children: ReactNode }) => {
   );
 };
 
+// Hook for consuming translation context
 export const useTranslation = () => {
   const context = useContext(TranslationContext);
   if (!context) throw new Error("useTranslation must be used within a TranslationProvider");
