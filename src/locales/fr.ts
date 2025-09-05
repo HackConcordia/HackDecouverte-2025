@@ -137,6 +137,30 @@ const fr = {
         intro:
           "Étudiant en SOEN travaillant à renforcer les relations d'entreprise et assurer le succès de l'événement.",
       },
+      20: {
+        name: "Steven Lam",
+        position: "Directeur des Partenariats",
+        intro:
+          "Étudiant en informatique passionné par la création de partenariats et l’engagement communautaire.",
+      },
+      21: {
+        name: "Marilyne Nguyen",
+        position: "Directrice de la Technologie",
+        intro:
+          "Étudiante en informatique passionnée par les nouvelles technologies et la résolution efficace de problèmes.",
+      },
+      22: {
+        name: "Hajar Blahmam",
+        position: "Directrice des Événements",
+        intro:
+          "Étudiante en informatique (BCompSc)",
+      },
+      23: {
+        name: "Toby Fischer",
+        position: "Directeur de la Logistique",
+        intro:
+          "Étudiant en informatique (BCompSc)",
+      },
     },
   },
   sponsors: {
