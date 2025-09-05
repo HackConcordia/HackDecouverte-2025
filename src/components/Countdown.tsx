@@ -1,30 +1,38 @@
 import { useState, useEffect } from 'react';
 
-const Countdown = ({ targetDate }: any) => {
-    const calculateTimeLeft = () => {
+interface CountdownProps {
+    targetDate: string | Date;
+}
+
+interface TimeLeft {
+    days: number;
+    hours: number;
+    minutes: number;
+    seconds: number;
+}
+
+const Countdown: React.FC<CountdownProps> = ({ targetDate }) => {
+    const calculateTimeLeft = (): TimeLeft => {
         const difference = +new Date(targetDate) - +new Date();
-        let timeLeft: any = {};
 
         if (difference > 0) {
-            timeLeft = {
+            return {
                 days: Math.floor(difference / (1000 * 60 * 60 * 24)),
                 hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
                 minutes: Math.floor((difference / 1000 / 60) % 60),
                 seconds: Math.floor((difference / 1000) % 60),
             };
         } else {
-            timeLeft = {
+            return {
                 days: 0,
                 hours: 0,
                 minutes: 0,
                 seconds: 0,
             };
         }
-
-        return timeLeft;
     };
 
-    const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+    const [timeLeft, setTimeLeft] = useState<TimeLeft>(calculateTimeLeft());
     const [isClient, setIsClient] = useState(false);
 
     useEffect(() => {
@@ -41,23 +49,19 @@ const Countdown = ({ targetDate }: any) => {
         return null;
     }
 
-    const timerComponents: any[] = [];
-
-    Object.keys(timeLeft).forEach((interval) => {
-        timerComponents.push(
-            <div
-                key={interval}
-                className='flex flex-col items-center mt-6 w-[80] md:w-[80px] animate-fade-bottom text-gray-900 dark:text-gray-100'
-            >
-                <span className='text-4xl md:text-5xl font-bold'>{timeLeft[interval]}</span>
-                <span className='text-lg md:text-lg capitalize mt-2'>{interval}</span>
-            </div>
-        );
-    });
+    const timerComponents = Object.entries(timeLeft).map(([interval, value]) => (
+        <div
+            key={interval}
+            className="flex flex-col items-center mt-6 w-[80px] md:w-[80px] animate-fade-bottom text-gray-900"
+        >
+            <span className="text-4xl md:text-5xl font-bold">{value}</span>
+            <span className="text-lg md:text-lg capitalize mt-2">{interval}</span>
+        </div>
+    ));
 
     return (
-        <div className='flex justify-center items-center space-x-4'>
-            {timerComponents.length ? timerComponents : 'Event has started!'}
+        <div className="flex justify-center items-center space-x-4">
+            {timerComponents.length > 0 ? timerComponents : <span>Event has started!</span>}
         </div>
     );
 };
