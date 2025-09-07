@@ -15,9 +15,7 @@ export default function FAQ() {
   
   
   const faqs = faqKeys.map((key) => ({
-    // @ts-expect-error: We're using dynamic keys that aren't part of the type system
     question: t(`faq.queries.${key}.question`),
-    // @ts-expect-error: We're using dynamic keys that aren't part of the type system
     answer: t(`faq.queries.${key}.answer`),
   }));
 
@@ -34,7 +32,7 @@ export default function FAQ() {
               className="w-full flex justify-between items-center text-left bg-[#412721] text-white p-4"
               onClick={() => toggleFAQ(idx)}
             >
-              <h3 className="text-base lg:text-lg font-semibold">
+              <h3 className="text-sm lg:text-lg font-semibold">
                 {faq.question}
               </h3>
               <span className="text-xl">{openIndex === idx ? "−" : "+"}</span>
@@ -45,7 +43,7 @@ export default function FAQ() {
                 openIndex === idx ? "max-h-40 opacity-100" : "max-h-0 opacity-0"
               }`}
             >
-              <p className="text-gray-700 px-4 pb-4 pt-2">{faq.answer}</p>
+              <p className="text-sm lg:text-base text-gray-700 px-4 pb-4 pt-2">{faq.answer}</p>
             </div>
           </div>
         ))}
