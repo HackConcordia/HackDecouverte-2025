@@ -20,14 +20,14 @@ export const metadata: Metadata = {
     'coding event',
     'bilingual hackathon',
   ],
-  authors: [{ name: 'HackConcordia Team', url: 'https://www.instagram.com/hackconcordia/' }],
+  authors: [{ name: 'HackConcordia Team', url: 'https://www.instagram.com/hackconcordia' }],
   creator: 'HackConcordia',
   publisher: 'HackConcordia',
   openGraph: {
     title: 'HackDécouverte 2025 | HackConcordia',
     description:
       'HackDécouverte is a bilingual, beginner-friendly hackathon for pre-university students across Québec. Hosted by HackConcordia at Concordia University.',
-    url: 'https://www.hackdecouverte.io/',
+    url: 'https://www.hackdecouverte.io',
     siteName: 'HackDécouverte',
     images: [
       {
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     creator: '@HackConcordia',
   },
   other: {
-    instagram: 'https://www.instagram.com/hackconcordia/',
+    instagram: 'https://www.instagram.com/hackconcordia',
     "application/ld+json": JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Event",
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
       organizer: {
         "@type": "Organization",
         name: "HackConcordia",
-        url: "https://www.hackconcordia.io/"
+        url: "https://www.hackconcordia.io"
       }
     }),
   },
@@ -76,7 +76,7 @@ export const metadata: Metadata = {
     apple: '/apple-touch-icon.png',
   },
   alternates: {
-    canonical: 'https://www.hackdecouverte.io/',
+    canonical: 'https://www.hackdecouverte.io',
   },
 };
 
@@ -87,7 +87,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang={lang}>
       <head>
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-FV2RHZPWGS"
+          src="https://www.googletagmanager.com/gtag/js?id=G-MBP0H14WEP"
           strategy="afterInteractive"
         />
         <Script id="google-analytics" strategy="afterInteractive">
@@ -95,7 +95,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-FV2RHZPWGS');
+            gtag('config', 'G-MBP0H14WEP');
           `}
         </Script>
       </head>
