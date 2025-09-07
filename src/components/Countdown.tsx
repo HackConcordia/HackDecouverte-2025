@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useTranslation } from "@/i18n/TranslationContext";
 
 interface CountdownProps {
     targetDate: string | Date;
@@ -12,6 +13,7 @@ interface TimeLeft {
 }
 
 const Countdown: React.FC<CountdownProps> = ({ targetDate }) => {
+    const { t } = useTranslation();
     const calculateTimeLeft = (): TimeLeft => {
         const difference = +new Date(targetDate) - +new Date();
 
@@ -55,13 +57,13 @@ const Countdown: React.FC<CountdownProps> = ({ targetDate }) => {
             className="flex flex-col items-center mt-6 w-[80px] md:w-[80px] animate-fade-bottom text-gray-900"
         >
             <span className="text-4xl md:text-5xl font-bold">{value}</span>
-            <span className="text-lg md:text-lg capitalize mt-2">{interval}</span>
+            <span className="text-lg md:text-lg capitalize mt-2">{t(`hero.${interval}`)}</span>
         </div>
     ));
 
     return (
         <div className="flex justify-center items-center space-x-4">
-            {timerComponents.length > 0 ? timerComponents : <span>Event has started!</span>}
+            {timerComponents.length > 0 ? timerComponents : <span>{t("hero.started")}</span>}
         </div>
     );
 };
