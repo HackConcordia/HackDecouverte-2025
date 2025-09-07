@@ -6,15 +6,16 @@ type PromoCardProps = {
   cta?: React.ReactNode;
 };
 
-export default function PromoCard({ title, body, cta, ...props }: PromoCardProps) {
+export default function PromoCard({ title, body, cta }: PromoCardProps) {
   return (
     <section
-      {...props}
       style={{
         border: "5px solid #9cccae",
         backgroundColor: "#ffec97dc",
       }}
       className="max-w-3xl rounded-sm shadow-lg pb-4"
+      data-aos="fade-left"
+      data-aos-delay="200"
     >
       <section
         className="text-left"

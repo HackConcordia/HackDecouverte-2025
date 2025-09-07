@@ -33,14 +33,12 @@ export default function AboutUs() {
                             key={index}
                             title={card.title}
                             body={card.description}
-                            data-aos="fade-left"
-                            data-aos-delay="300"
                         />
                     ))}
                 </div>
 
                 {/* Right Column: Team Members */}
-                <div className="" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
+                <div className="" >
                     <TeamMemberSection />
                 </div>
             </div>

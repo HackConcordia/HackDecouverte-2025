@@ -62,7 +62,7 @@ const Countdown: React.FC<CountdownProps> = ({ targetDate }) => {
     ));
 
     return (
-        <div className="flex justify-center items-center space-x-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+        <div className="flex justify-center items-center space-x-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
             {timerComponents.length > 0 ? timerComponents : <span>{t("hero.started")}</span>}
         </div>
     );

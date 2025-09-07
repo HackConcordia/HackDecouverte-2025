@@ -28,6 +28,8 @@ export default function FAQ() {
             key={idx}
             className="border-4 border-[#412721] rounded-xs shadow hover:shadow-lg transition h-fit bg-[#FFEC9799]"
             data-aos="zoom-in"
+            data-aos-duration="1000"
+            data-aos-delay="200"
           >
             <button
               className="w-full flex justify-between items-center text-left bg-[#412721] text-white p-4"
