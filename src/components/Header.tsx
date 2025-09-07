@@ -4,6 +4,7 @@ import { useTranslation } from "@/i18n/TranslationContext";
 import Link from "next/link";
 import { Language } from "@/i18n/types";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 export default function Header() {
     const { language, setLanguage, t } = useTranslation(); // Added `t` for translations
@@ -32,9 +33,12 @@ export default function Header() {
         <header className="fixed top-0 w-full bg-[#412721] shadow z-50 text-[#F9C22F]">
             <nav className="max-w-7xl mx-auto flex items-center justify-between p-4">
                 {/* Logo */}
-                <Link href="/" className="text-2xl font-bold">
-                    {t("title")}
-                </Link>
+                <div className="flex items-center space-x-2">
+                    <Image src="/images/HackDecouverte.png" alt="Logo" width={30} height={30} className="rounded-sm" />
+                    <Link href="/" className="text-2xl font-bold">
+                        {t("title")}
+                    </Link>
+                </div>
 
                 {/* Nav Links */}
                 <div className="space-x-6 hidden md:flex">
@@ -65,6 +69,7 @@ export default function Header() {
                         }
                     </div>
                 </div>
+
             </nav>
         </header>
     );

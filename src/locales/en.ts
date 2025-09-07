@@ -8,6 +8,12 @@ export const en = {
     event: "November 15, 2025 • Concordia University, Montréal",
     register: "REGISTER NOW",
     organizer: "Brought to you by",
+    addToCalendar: "Add to calendar",
+    days: "days",
+    hours: "hours",
+    minutes: "minutes",
+    seconds: "seconds", 
+    started: "Event has started!"
   },
   aboutUs: {
     title: "About Us",
@@ -140,6 +146,30 @@ export const en = {
         position: "Director of Sponsorship",
         intro:
           "SOEN student working to strengthen corporate relationships and ensure event success.",
+      },
+           20: {
+        name: "Steven Lam",
+        position: "Director of Sponsorship",
+        intro:
+          "Computer Science student passionate about creating partnerships and community engagement.",
+      },
+      21: {
+        name: "Marilyne Nguyen",
+        position: "Director of Technology",
+        intro:
+          "Computer Science student passionate about new technologies and efficient problem-solving.",
+      },
+      22: {
+        name: "Hajar Blahmam",
+        position: "Director of Events",
+        intro:
+          "Computer Science student",
+      },
+      23: {
+        name: "Toby Fischer",
+        position: "Director of Logistics",
+        intro:
+          "Computer Science student",
       },
     },
   },

@@ -222,6 +222,47 @@ const teamMembers: TeamMember[] = [
             github: "http://github.com/Subaanky",
         },
     },
+    {
+        id: 20,
+        name: "Steven Lam",
+        position: "team.members.20.position",
+        intro: "team.members.20.intro",
+        imageSrc: "/images/team/Steven.jpeg",
+        socials: {
+            linkedin: "https://www.linkedin.com/in/steven-lam12/"
+        },
+    },
+    {
+        id: 21,
+        name: "Marilyne Nguyen",
+        position: "team.members.21.position",
+        intro: "team.members.21.intro",
+        imageSrc: "/images/team/Marilyne.jpeg",
+        socials: {
+             linkedin: "https://www.linkedin.com/in/marilyne-nguyen1515/",
+            github: "https://github.com/marilynenguyen"
+        },
+    },
+    {
+        id: 22,
+        name: "Hajar Blahmam",
+        position: "team.members.22.position",
+        intro: "team.members.22.intro",
+        imageSrc: "/images/team/Hajar.jpg",
+        socials: {
+            linkedin: "https://www.linkedin.com/in/hblahmam721/"
+        },
+    },
+    {
+        id: 23,
+        name: "Toby Fischer",
+        position: "team.members.23.position",
+        intro: "team.members.23.intro",
+        imageSrc: "/images/team/Toby.jpg",
+        socials: {
+            linkedin: ""
+        },
+    }
 ];
 
 
