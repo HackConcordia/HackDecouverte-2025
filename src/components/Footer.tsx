@@ -22,7 +22,7 @@ export default function Footer() {
     const { t } = useTranslation();
     return (
         <footer className="bg-[#412721] text-white">
-            <div className="max-w-7xl mx-auto py-6 flex justify-between items-center ">
+            <div className="max-w-7xl mx-auto py-6 flex justify-between items-center text-xs lg:text-base px-4">
             <p>
                 © {new Date().getFullYear()}{" - "}{new Date().getFullYear() + 1}{" "}
                 <a
