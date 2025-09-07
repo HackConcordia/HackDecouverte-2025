@@ -9,7 +9,7 @@ import FAQ from "@/components/FAQ";
 export default function Home() {
   return (
     <div className="relative" style={{
-      backgroundImage: "url('/images/bg 4.jpg')",
+      backgroundImage: "url('/images/bg.jpg')",
       backgroundSize: "cover", backgroundPosition: "center", backgroundAttachment: "fixed"
     }}>
       <Header />
