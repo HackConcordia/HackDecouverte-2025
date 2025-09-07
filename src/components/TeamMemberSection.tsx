@@ -245,7 +245,7 @@ export default function TeamMemberSection() {
                         <div className="flex space-x-3 mb-2">
                             {displayMember.socials?.linkedin && (
                                 <a href={displayMember.socials.linkedin} target="_blank" rel="noreferrer" title="LinkedIn">
-                                    <FaLinkedin className="w-5 h-5 text-[#491000]" />
+               git         <FaLinkedin className="w-5 h-5 text-[#491000]" />
                                 </a>
                             )}
                             {displayMember.socials?.github && (
