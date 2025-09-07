@@ -31,7 +31,9 @@ export default function Hero() {
             </p>
 
             <a
-                href="#register"
+                href="https://register.hackdecouverte.io/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="block py-3 px-5 text-center bg-[#491000] text-white font-bold rounded-sm shadow hover:bg-[#320b00] transition text-xs lg:text-base mt-2"
             >
                 {t("hero.register")}
