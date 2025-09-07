@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { useTranslation } from "@/i18n/TranslationContext";
-import { config } from "process";
 import Countdown from "./Countdown";
 import DateDisplay from "./DateDisplay";
 
@@ -53,7 +52,7 @@ export default function Hero() {
                     href="https://www.hackconcordia.io/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="font-semibold text-[#491000] hover:underline"
+                    className="font-semibold text-[#491000] underline"
                 >
                     HackConcordia
                 </a>
