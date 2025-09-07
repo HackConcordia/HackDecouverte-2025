@@ -24,7 +24,7 @@ export default function AboutUs() {
 
     return (
         <section id="about-us" className="flex flex-col items-center justify-center text-center max-w-7xl mx-auto px-4 lg:py-20">
-            <SectionTitle>About Us</SectionTitle>
+            <SectionTitle>{t("aboutUs.title")}</SectionTitle>
 
             <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 mt-8">
                 {/* Left Column: Cards */}
