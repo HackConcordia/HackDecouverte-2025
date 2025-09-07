@@ -14,6 +14,8 @@ export default function PromoCard({ title, body, cta }: PromoCardProps) {
         backgroundColor: "#ffec97dc",
       }}
       className="max-w-3xl rounded-sm shadow-lg pb-4"
+      data-aos="fade-left"
+      data-aos-delay="200"
     >
       <section
         className="text-left"
