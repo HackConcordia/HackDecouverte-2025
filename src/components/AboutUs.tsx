@@ -21,7 +21,6 @@ export default function AboutUs() {
             description: t("aboutUs.hackConcordia.answer")
         },
     ];
-
     return (
         <section id="about-us" className="flex flex-col items-center justify-center text-center max-w-7xl mx-auto px-4 lg:py-20">
             <SectionTitle>{t("aboutUs.title")}</SectionTitle>
@@ -34,12 +33,14 @@ export default function AboutUs() {
                             key={index}
                             title={card.title}
                             body={card.description}
+                            data-aos="fade-left"
+                            data-aos-delay="300"
                         />
                     ))}
                 </div>
 
                 {/* Right Column: Team Members */}
-                <div className="">
+                <div className="" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
                     <TeamMemberSection />
                 </div>
             </div>

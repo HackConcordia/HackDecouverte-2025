@@ -10,7 +10,7 @@ export default function Volunteer() {
   return (
     <section id="volunteer" className="pt-10 lg:pt-20 text-center max-w-7xl mx-auto px-4 flex justify-center items-center flex-col">
       <SectionTitle>{t("volunteer.title")}</SectionTitle>
-      <div className="mt-10 lg:mt-35 lg:mb-35">
+      <div className="mt-10 lg:mt-35 lg:mb-35" data-aos="fade-up">
         <PromoCard
           title={t("volunteer.promo.heading")}
           body={t("volunteer.promo.body")}

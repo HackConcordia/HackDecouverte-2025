@@ -27,6 +27,7 @@ export default function FAQ() {
           <div
             key={idx}
             className="border-4 border-[#412721] rounded-xs shadow hover:shadow-lg transition h-fit bg-[#FFEC9799]"
+            data-aos="zoom-in"
           >
             <button
               className="w-full flex justify-between items-center text-left bg-[#412721] text-white p-4"

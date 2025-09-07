@@ -17,6 +17,7 @@ export default function SectionTitle({ children }: SectionTitleProps) {
         textTransform: "uppercase",
         fontWeight: 800,
       }}
+      data-aos="fade-down"
     >
       {children}
     </h2>

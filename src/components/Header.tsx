@@ -5,6 +5,8 @@ import Link from "next/link";
 import { Language } from "@/i18n/types";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function Header() {
     const { language, setLanguage, t } = useTranslation(); // Added `t` for translations
@@ -29,6 +31,9 @@ export default function Header() {
         handleScroll();
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
+    useEffect(() => {
+    AOS.init({ once: false, mirror: true });
+  }, []);
     return (
         <header className="fixed top-0 w-full bg-[#412721] shadow z-50 text-[#F9C22F]">
             <nav className="max-w-7xl mx-auto flex items-center justify-between p-4">
@@ -54,7 +59,8 @@ export default function Header() {
                     className={`hover:text-yellow-600 ${activeSection === "volunteer" ? "text-yellow-400 font-bold" : ""}`}>
                         {t("volunteer.title")}
                     </Link>
-                    <Link href="#faq" className="hover:text-yellow-600">
+                    <Link href="#faq" 
+                    className={`hover:text-yellow-600 ${activeSection === "faq" ? "text-yellow-400 font-bold" : ""}`}>
                         {t("faq.title")}
                     </Link>
                     <div>

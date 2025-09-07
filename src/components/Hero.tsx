@@ -14,7 +14,8 @@ export default function Hero() {
     };
 
     return (
-        <section className="relative mt-10 sm:mt-0 lg:min-h-screen flex flex-col items-center md:justify-center text-center max-w-7xl mx-auto px-4">
+        <section className="relative mt-10 sm:mt-0 lg:min-h-screen flex flex-col items-center md:justify-center text-center max-w-7xl mx-auto px-4"  
+        data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
 
             {/* Title */}
             <h1 className="relative text-4xl sm:text-6xl md:text-8xl font-extrabold pt-4 lg:pt-6 pb-4
@@ -46,7 +47,7 @@ export default function Hero() {
             />
 
             {/* HackConcordia credit */}
-            <p className="mt-6 lg:mt-4 text-sm sm:text-base text-gray-800">
+            <p className="mt-6 lg:mt-4 text-sm sm:text-base text-gray-800" >
                 {t("hero.organizer")}{" "}
                 <a
                     href="https://www.hackconcordia.io/"

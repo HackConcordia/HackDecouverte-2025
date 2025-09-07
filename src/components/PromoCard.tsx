@@ -6,9 +6,10 @@ type PromoCardProps = {
   cta?: React.ReactNode;
 };
 
-export default function PromoCard({ title, body, cta }: PromoCardProps) {
+export default function PromoCard({ title, body, cta, ...props }: PromoCardProps) {
   return (
     <section
+      {...props}
       style={{
         border: "5px solid #9cccae",
         backgroundColor: "#ffec97dc",
