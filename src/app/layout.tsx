@@ -1,6 +1,7 @@
 import './globals.css';
 import { TranslationProvider } from '../i18n/TranslationContext';
 import type { Metadata } from 'next';
+import Script from 'next/script';
 
 export const metadata: Metadata = {
   title: 'HackDécouverte 2025 | HackConcordia',
@@ -48,7 +49,7 @@ export const metadata: Metadata = {
     creator: '@HackConcordia',
   },
   other: {
-    instagram: 'https://www.instagram.com/p/DOEzF9QkZgT/',
+    instagram: 'https://www.instagram.com/hackconcordia/',
     "application/ld+json": JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Event",
@@ -80,11 +81,24 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  // Later, TranslationProvider can expose current lang (e.g. "en" | "fr")
   const lang = "fr"; // default is French
 
   return (
     <html lang={lang}>
+      <head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-FV2RHZPWGS"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-FV2RHZPWGS');
+          `}
+        </Script>
+      </head>
       <body>
         <TranslationProvider>{children}</TranslationProvider>
       </body>
