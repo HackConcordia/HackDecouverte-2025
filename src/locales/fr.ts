@@ -6,7 +6,13 @@ const fr = {
     subheading: "Un hackathon bilingue et convivial pour les étudiants préuniversitaires du Québec.",
     event: "15 novembre 2025 • Université Concordia, Montréal",
     register: "INSCRIVEZ-VOUS MAINTENANT",
-    organizer: "Présenté par"
+    organizer: "Présenté par",
+    addToCalendar: "Ajouter au calendrier",
+    days: "jours",
+    hours: "heures",
+    minutes: "minutes",
+    seconds: "secondes",
+    started: "L'événement a commencé!"
   },
   aboutUs: {
     title: "À propos de nous",

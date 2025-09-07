@@ -8,6 +8,12 @@ export const en = {
     event: "November 15, 2025 • Concordia University, Montréal",
     register: "REGISTER NOW",
     organizer: "Brought to you by",
+    addToCalendar: "Add to calendar",
+    days: "days",
+    hours: "hours",
+    minutes: "minutes",
+    seconds: "seconds", 
+    started: "Event has started!"
   },
   aboutUs: {
     title: "About Us",
