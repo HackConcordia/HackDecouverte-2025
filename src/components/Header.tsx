@@ -39,7 +39,7 @@ export default function Header() {
             <nav className="max-w-7xl mx-auto flex items-center justify-between p-4">
                 {/* Logo */}
                 <div className="flex items-center space-x-2">
-                    <Image src="/images/HackDecouverte.png" alt="Logo" width={30} height={30} className="rounded-sm" />
+                    <Image src="/images/HCD_logo.png" alt="Logo" width={30} height={30} className="rounded-sm" />
                     <Link href="/" className="text-2xl font-bold">
                         {t("title")}
                     </Link>

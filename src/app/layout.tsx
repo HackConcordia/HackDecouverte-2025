@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     siteName: 'HackDécouverte',
     images: [
       {
-        url: '/images/HackDecouverte.png',
+        url: '/images/HCD_logo.png',
         width: 1200,
         height: 630,
         alt: 'HackDécouverte Hackathon Banner',
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     title: 'HackDécouverte 2025 | HackConcordia',
     description:
       'A beginner-friendly, bilingual hackathon for Québec pre-university students, presented by HackConcordia.',
-    images: ['/images/HackDecouverte.png'],
+    images: ['/images/HCD_logo.png'],
     creator: '@HackConcordia',
   },
   other: {
