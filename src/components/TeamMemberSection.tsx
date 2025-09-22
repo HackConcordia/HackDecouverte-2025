@@ -124,7 +124,8 @@ const teamMembers: TeamMember[] = [
         intro: "team.members.10.intro",
         imageSrc: "/images/team/Louay.jpg",
         socials: {
-            linkedin: "https://www.linkedin.com/in/christina-alexandrakis-2590b2338",
+            linkedin: "https://www.linkedin.com/in/louayhelou/",
+            github: "https://github.com/LH52",
         },
     },
     {
