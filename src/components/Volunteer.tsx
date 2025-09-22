@@ -20,8 +20,8 @@ export default function Volunteer() {
           body={t("volunteer.promo.body")}
           cta={
             <div className="px-4">
-              <CTAButton href="#">{t("volunteer.promo.cta.volunteer")}</CTAButton>
-              <CTAButton href="#">{t("volunteer.promo.cta.mentor")}</CTAButton>
+              <CTAButton href="https://docs.google.com/forms/d/e/1FAIpQLSddF5imJ2oFk5LkjZizlPsAVpp8IGPYfPL4C0RNuhOrHiLU2Q/viewform">{t("volunteer.promo.cta.volunteer")}</CTAButton>
+              <CTAButton href="https://docs.google.com/forms/d/e/1FAIpQLSctrOa8aSSZ3dd4Kl0N8TlvQObLR0kYwozWSWNF_7NQEIoNkQ/viewform">{t("volunteer.promo.cta.mentor")}</CTAButton>
             </div>
           }
         />
