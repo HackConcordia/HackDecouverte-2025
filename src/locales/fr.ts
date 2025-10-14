@@ -205,7 +205,7 @@ const fr = {
       },
       q5: {
         question: "Quelle est la taille des équipes?",
-        answer: "Les équipes peuvent avoir jusqu'à 5 membres. Ne vous inquiétez pas si vous n'avez pas d'équipe, nous vous aiderons à en trouver une pendant l'événement."
+        answer: "Les équipes peuvent avoir jusqu'à 4 membres. Ne vous inquiétez pas si vous n'avez pas d'équipe, nous vous aiderons à en trouver une pendant l'événement."
       },
       q6: {
         question: "Quel est le format de l'événement?",

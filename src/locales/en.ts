@@ -214,7 +214,7 @@ export const en = {
       q5: {
         question: "What is the team size?",
         answer:
-          "Teams can have up to 5 members. Don’t worry if you don’t have a team—we’ll help you find one during the event.",
+          "Teams can have up to 4 members. Don’t worry if you don’t have a team—we’ll help you find one during the event.",
       },
       q6: {
         question: "What is the event format?",
