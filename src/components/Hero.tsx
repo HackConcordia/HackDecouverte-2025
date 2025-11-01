@@ -9,8 +9,8 @@ export default function Hero() {
     const { t } = useTranslation();
     const config = {
         title: 'HackDecouverte',
-        eventStartDate: '2025-11-15T08:00:00',
-        eventEndDate: '2025-11-15T19:00:00',
+        eventStartDate: '2025-11-29T08:00:00',
+        eventEndDate: '2025-11-29T19:00:00',
     };
 
     return (

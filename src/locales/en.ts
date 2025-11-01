@@ -5,7 +5,7 @@ export const en = {
     heading: "HackDécouverte",
     subheading:
       "A bilingual, beginner-friendly hackathon for pre-university students across Québec.",
-    event: "November 15, 2025 • Concordia University, Montréal",
+    event: "November 29, 2025 • Concordia University, Montréal",
     register: "REGISTER NOW",
     organizer: "Brought to you by",
     addToCalendar: "Add to calendar",
