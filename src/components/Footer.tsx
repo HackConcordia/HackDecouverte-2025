@@ -15,7 +15,7 @@ const socialLinks: SocialLink[] = [
     { href: 'https://www.instagram.com/p/DOEzF9QkZgT/', icon: FaInstagram },
     // { href: 'https://www.linkedin.com/company/hackconcordia', icon: FaLinkedinIn },
     // { href: 'https://x.com/HackConcordia', icon: FaX },
-    { href: 'mailto:technology.hackconcordia@ecaconcordia.ca', icon: FaRegEnvelope },
+    { href: 'mailto:team.hackconcordia@ecaconcordia.ca', icon: FaRegEnvelope },
 ];
 
 export default function Footer() {
