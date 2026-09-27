@@ -6,7 +6,9 @@
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "dev:2026": "next dev src/sites/2026 -p 3026",
+    "dev:2025": "next dev src/sites/2025 -p 3025"
   },
   "dependencies": {
     "aos": "^2.3.4",
