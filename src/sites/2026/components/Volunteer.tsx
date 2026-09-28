@@ -18,7 +18,7 @@ const VOLUNTEER_SPLATS: SplatSpec[] = [
 // TODO: point these to your volunteer / mentor sign-up forms.
 const LINKS = [
   {
-    href: "/register?role=volunteer",
+    href: "https://forms.gle/QbtKmnHsBM34hXJR7",
     textKey: "join.vol",
     color: "#0f9bb4",
     scribble: "M4 8 C40 4 120 4 166 8 M60 14 C120 10 150 20 110 20 C80 20 70 14 100 12",
@@ -74,6 +74,7 @@ export default function Volunteer() {
           <a
             key={link.textKey}
             href={link.href}
+            {...(link.href.startsWith("http") && { target: "_blank", rel: "noopener noreferrer" })}
             className="scribble"
             style={cssVars({ "--c": link.color })}
           >
