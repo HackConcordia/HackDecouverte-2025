@@ -33,7 +33,7 @@ const INFO_LINKS = [
 const SOCIALS = [
   {
     label: "Instagram",
-    href: "https://www.instagram.com/hackconcordia/",
+    href: "https://www.instagram.com/hackdecouverte/",
     icon: (
       <>
         <rect x="3" y="3" width="18" height="18" rx="5" />
@@ -51,11 +51,6 @@ const SOCIALS = [
         <path d="M8 10v7M8 7v.5M12 17v-7M12 13c0-3 5-3 5 0v4" />
       </>
     ),
-  },
-  {
-    label: "X",
-    href: "#", // TODO: add the X link
-    icon: <path d="M5 4l14 16M19 4L5 20" />,
   },
   {
     label: "Email",

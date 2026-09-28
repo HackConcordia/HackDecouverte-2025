@@ -15,19 +15,13 @@ const VOLUNTEER_SPLATS: SplatSpec[] = [
   ["pink", 97, 97, 150],
 ];
 
-// TODO: point these to your volunteer / mentor sign-up forms.
+// TODO: point this to your volunteer sign-up form.
 const LINKS = [
   {
     href: "/register?role=volunteer",
     textKey: "join.vol",
     color: "#0f9bb4",
     scribble: "M4 8 C40 4 120 4 166 8 M60 14 C120 10 150 20 110 20 C80 20 70 14 100 12",
-  },
-  {
-    href: "/register?role=mentor",
-    textKey: "join.men",
-    color: "#ff5fc1",
-    scribble: "M20 6 C60 2 110 2 150 6 M90 8 C60 12 70 22 100 12 C110 8 80 20 90 22",
   },
 ];
 
