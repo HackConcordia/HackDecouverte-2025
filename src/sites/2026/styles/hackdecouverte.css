@@ -9,7 +9,7 @@
      2. Base                           8. Team
      3. Textures & paint splats        9. FAQ
      4. Page chrome                   10. Footer
-     5. Hero                          11. New: header, countdown, sponsors
+     5. Hero                          11. New: header, countdown
      6. Ticker + About                12. Mobile + reduced motion
 
    Tip: most colours come from the variables in :root below.
@@ -1625,7 +1625,7 @@ a {
 
 
 /* =========================================================================
-   REACT VERSION: header, countdown, sponsors
+   REACT VERSION: header, countdown
    ========================================================================= */
 
 /* Header sits on top of the hero */
@@ -1735,112 +1735,6 @@ a.sticky {
   color: var(--yellow);
   text-shadow: 3px 3px 0 #000;
   animation: bob 1.2s ease-in-out infinite;
-}
-
-/* --- Sponsors --- */
-.sponsors {
-  padding: 100px clamp(16px, 4vw, 60px) 110px;
-  text-align: center;
-}
-
-.sponsors-text {
-  position: relative;
-  z-index: 2;
-  max-width: 52ch;
-  margin: 16px auto 40px;
-  color: #fff;
-  line-height: 1.6;
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
-}
-
-.sponsor-grid {
-  position: relative;
-  z-index: 2;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 26px;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.sticker {
-  position: relative;
-  display: grid;
-  place-items: center;
-  aspect-ratio: 3 / 2;
-  padding: 18px;
-  background: #fff;
-  background-image: var(--noise);
-  border-radius: 14px;
-  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.4);
-  text-decoration: none;
-  color: #000;
-  transform: rotate(var(--tilt)) scale(0);
-  transition: transform 0.35s cubic-bezier(0.2, 1.6, 0.4, 1);
-}
-
-/* Tape on the top of each sticker */
-.sticker::before {
-  content: "";
-  position: absolute;
-  top: -10px;
-  left: 50%;
-  width: 64px;
-  height: 20px;
-  background: rgba(232, 222, 196, 0.9);
-  transform: translateX(-50%) rotate(-4deg);
-}
-
-.sponsors.in .sticker {
-  animation: stickerIn 0.6s cubic-bezier(0.2, 1.6, 0.4, 1) calc(0.3s + var(--i) * 0.1s) forwards;
-}
-
-@keyframes stickerIn {
-  from {
-    transform: rotate(calc(var(--tilt) - 25deg)) scale(0);
-  }
-  to {
-    transform: rotate(var(--tilt)) scale(1);
-  }
-}
-
-.sticker:hover {
-  animation: wiggle 0.5s ease;
-}
-
-@keyframes wiggle {
-  0%,
-  100% {
-    transform: rotate(var(--tilt)) scale(1.05);
-  }
-  25% {
-    transform: rotate(calc(var(--tilt) - 5deg)) scale(1.08);
-  }
-  75% {
-    transform: rotate(calc(var(--tilt) + 5deg)) scale(1.08);
-  }
-}
-
-.sticker img {
-  max-width: 100%;
-  max-height: 80px;
-  object-fit: contain;
-}
-
-.sticker-name {
-  font: 400 1.1rem var(--marker);
-}
-
-.sticker.empty {
-  background-color: rgba(255, 255, 255, 0.75);
-  border: 3px dashed #000;
-  color: #555;
-}
-
-.sponsors-cta {
-  position: relative;
-  z-index: 2;
-  margin-top: 44px;
 }
 
 /* =========================================================================
