@@ -11,7 +11,7 @@ import { cssVars, round1, Splats, SplatSpec, useInView, usePrefersReducedMotion 
 import { Language, useLanguage } from "../lib/i18n";
 import SectionTitle from "./SectionTitle";
 
-type Category = "org" | "tech" | "mentor";
+type Category = "org" | "tech";
 type Filter = "all" | Category;
 
 type Bilingual = Record<Language, string>;
@@ -61,31 +61,12 @@ export const TEAM_MEMBERS: TeamMember[] = [
       fr: "Codirige l’équipe tech et développe la plateforme d’inscription et d’enregistrement des participant·e·s.",
     },
   },
-  {
-    name: "Camille Roy",
-    role: { en: "Mentor", fr: "Mentor" },
-    category: "mentor",
-    bio: {
-      en: "Helps first-time teams pick an idea and ship a working demo.",
-      fr: "Aide les équipes débutantes à choisir une idée et à livrer une démo fonctionnelle.",
-    },
-  },
-  {
-    name: "Jordan Lee",
-    role: { en: "Mentor", fr: "Mentor" },
-    category: "mentor",
-    bio: {
-      en: "Hardware nerd. Ask about Arduino, sensors and anything that blinks.",
-      fr: "Passionné·e de matériel. Pose-lui tes questions sur Arduino, les capteurs et tout ce qui clignote.",
-    },
-  },
 ];
 
 const FILTERS: { value: Filter; textKey: string }[] = [
   { value: "all", textKey: "team.all" },
   { value: "org", textKey: "team.org" },
   { value: "tech", textKey: "team.tech" },
-  { value: "mentor", textKey: "team.men" },
 ];
 
 const TEAM_SPLATS: SplatSpec[] = [
