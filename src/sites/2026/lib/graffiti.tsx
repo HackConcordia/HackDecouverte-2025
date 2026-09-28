@@ -85,21 +85,31 @@ export function useInView<T extends Element>(threshold = 0.18) {
 function createBrickWallSVG() {
   const brickColors = ["#8f4b37", "#9a553f", "#86432f", "#95503b", "#7e3f2d", "#a05a43", "#8a4733", "#93604b"];
 
-  // Light background = the mortar between bricks.
-  let svg = `<svg xmlns="http://www.w3.org/2000/svg" width="480" height="240"><rect width="480" height="240" fill="#cdb09a"/>`;
+  const WIDTH = 960;
+  const HEIGHT = 480;
+  const COLS = WIDTH / 80;
+  const ROWS = HEIGHT / 30;
 
-  for (let row = 0; row < 8; row++) {
+  // Light background = the mortar between bricks.
+  let svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${WIDTH}" height="${HEIGHT}"><rect width="${WIDTH}" height="${HEIGHT}" fill="#cdb09a"/>`;
+
+  for (let row = 0; row < ROWS; row++) {
     const rowOffset = row % 2 === 1 ? -40 : 0; // every other row is shifted half a brick
 
-    for (let col = 0; col < 7; col++) {
+    for (let col = 0; col < COLS; col++) {
       const x = rowOffset + col * 80 + 2;
       const y = row * 30 + 2;
       const color = brickColors[Math.floor(Math.random() * brickColors.length)];
-      svg += `<rect x="${x}" y="${y}" width="76" height="26" rx="2" fill="${color}"/>`;
+      const hasPatch = Math.random() < 0.35;
+      const patch = `x="${random(4, 40)}" y="${random(2, 14)}" width="${random(10, 30)}" height="${random(4, 10)}"`;
 
-      // Some bricks get a faint light patch so the wall looks worn.
-      if (Math.random() < 0.35) {
-        svg += `<rect x="${x + random(4, 40)}" y="${y + random(2, 14)}" width="${random(10, 30)}" height="${random(4, 10)}" fill="#fff" opacity=".07"/>`;
+      // A brick hanging off the left edge is drawn again on the right so the tile wraps seamlessly.
+      const copies = x < 0 ? [x, x + WIDTH] : [x];
+      for (const copyX of copies) {
+        svg += `<g transform="translate(${copyX} ${y})"><rect width="76" height="26" rx="2" fill="${color}"/>`;
+        // Some bricks get a faint light patch so the wall looks worn.
+        if (hasPatch) svg += `<rect ${patch} fill="#fff" opacity=".07"/>`;
+        svg += `</g>`;
       }
     }
   }

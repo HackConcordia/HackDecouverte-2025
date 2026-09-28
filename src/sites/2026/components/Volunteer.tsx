@@ -6,7 +6,7 @@
    banner, then the scribbled links draw their underlines.
    ========================================================================= */
 
-import { Splats, SplatSpec, useInView } from "../lib/graffiti";
+import { cssVars, Splats, SplatSpec, useInView } from "../lib/graffiti";
 import { Lines, useLanguage } from "../lib/i18n";
 
 const VOLUNTEER_SPLATS: SplatSpec[] = [
@@ -71,9 +71,17 @@ export default function Volunteer() {
 
       <div className="join-links">
         {LINKS.map((link) => (
-          <a key={link.textKey} href={link.href} className="scribble">
+          <a
+            key={link.textKey}
+            href={link.href}
+            className="scribble"
+            style={cssVars({ "--c": link.color })}
+          >
             <span>
-              <Lines text={t(link.textKey)} />
+              <span>
+                <Lines text={t(link.textKey)} />
+              </span>
+              <i aria-hidden="true">→</i>
             </span>
             <svg viewBox="0 0 170 24" aria-hidden="true">
               <path stroke={link.color} d={link.scribble} />

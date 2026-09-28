@@ -38,10 +38,7 @@
   --marker: "Permanent Marker", "Comic Sans MS", cursive;
   --body: "Poppins", system-ui, -apple-system, "Segoe UI", sans-serif;
 
-  /* Keeps content clear of phone notches */
   box-sizing: border-box;
-  padding-top: env(safe-area-inset-top, 0px);
-  padding-bottom: env(safe-area-inset-bottom, 0px);
 }
 
 /* Slightly darker paper and bricks in dark mode */
@@ -75,7 +72,11 @@ html {
 
 body {
   margin: 0;
-  background: var(--bg);
+  background-color: var(--bg);
+  background-image: var(--noise), var(--brick-img);
+  background-size:
+    220px 220px,
+    960px 480px;
   color: var(--text);
   font-family: var(--body);
   overflow-x: hidden;
@@ -100,14 +101,14 @@ a {
    TEXTURES & PAINT SPLATS
    Brick wall, paper, splats, drips, doodles (used everywhere)
    ========================================================================= */
-/* Brick wall background (--brick-img and --noise are created in main.js) */
+/* Brick sections are see-through so the body's wall (--brick-img, --noise from graffiti.tsx)
+   runs continuously across neighbouring sections. */
 .brick {
-  background-color: var(--bg);
-  background-image: var(--noise), var(--brick-img);
-  background-size:
-    220px 220px,
-    480px 240px;
   position: relative;
+  overflow-x: clip;
+}
+
+.hero.brick {
   overflow: hidden;
 }
 
@@ -115,7 +116,7 @@ a {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 50% 45%, transparent 45%, rgba(0, 0, 0, 0.38));
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.32), transparent 22% 78%, rgba(0, 0, 0, 0.32));
   pointer-events: none;
   z-index: 0;
 }
@@ -841,7 +842,14 @@ a {
 
 .scribble {
   position: relative;
-  display: inline-block;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.75em 1.3em 0.45em;
+  background: #141414;
+  border: 3px solid #fff;
+  border-radius: 14px 18px 12px 20px;
+  box-shadow: 6px 6px 0 var(--c, var(--pink));
   text-align: center;
   text-decoration: none;
   font: 400 clamp(1rem, 2vw, 1.3rem)/1.3 var(--marker);
@@ -852,14 +860,40 @@ a {
     -1px -1px 0 #000,
     1px -1px 0 #000,
     -1px 1px 0 #000;
-  transition: transform 0.3s cubic-bezier(0.2, 1.6, 0.4, 1);
+  transform: rotate(-2deg);
+  transition:
+    transform 0.3s cubic-bezier(0.2, 1.6, 0.4, 1),
+    box-shadow 0.3s cubic-bezier(0.2, 1.6, 0.4, 1);
+}
+
+.scribble:nth-child(even) {
+  transform: rotate(2deg);
+}
+
+.scribble > span {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.scribble i {
+  font: normal 800 1.1em/1 var(--body);
+  color: var(--c, var(--pink));
+  text-shadow: none;
+  -webkit-text-stroke: 0;
+  transition: transform 0.3s;
+}
+
+.scribble:hover i,
+.scribble:focus-visible i {
+  transform: translateX(4px);
 }
 
 .scribble svg {
   display: block;
   width: 100%;
   height: 24px;
-  margin-top: 4px;
+  margin-top: 2px;
   overflow: visible;
 }
 
@@ -878,7 +912,8 @@ a {
 
 .scribble:hover,
 .scribble:focus-visible {
-  transform: rotate(-5deg) scale(1.12);
+  transform: rotate(-4deg) scale(1.08);
+  box-shadow: 9px 9px 0 var(--c, var(--pink));
 }
 
 .scribble:hover path {
@@ -1521,13 +1556,14 @@ a {
   text-align: center;
   font: 400 clamp(2rem, 12vw, 13rem)/0.9 var(--graffiti);
   white-space: nowrap;
-  margin: 10px 0 -0.08em;
+  margin: calc(10px - 0.35em) 0 -0.08em;
   user-select: none;
   pointer-events: none;
 }
 
 .f-big span {
   display: block;
+  padding-top: 0.35em;
   color: transparent;
   -webkit-text-stroke: 2px rgba(243, 239, 232, 0.18);
 }
@@ -1638,12 +1674,12 @@ a {
   left: 0;
   right: 0;
   z-index: 10;
-  padding: clamp(16px, 3vw, 36px) clamp(16px, 3vw, 36px) 0;
+  padding: calc(clamp(16px, 3vw, 36px) + env(safe-area-inset-top, 0px)) clamp(16px, 3vw, 36px) 0;
 }
 
 .hero {
   grid-template-rows: 1fr;
-  padding-top: clamp(110px, 14vw, 150px);
+  padding-top: calc(clamp(110px, 14vw, 150px) + env(safe-area-inset-top, 0px));
 }
 
 /* Parallax wrapper around the hero splats */
