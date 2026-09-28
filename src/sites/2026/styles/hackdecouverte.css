@@ -757,6 +757,15 @@ a {
   transition: stroke-dashoffset 1s cubic-bezier(0.7, 0, 0.3, 1);
 }
 
+/* The #brush filter on these section-sized strokes needs ~150MB of image
+   buffers at 3x pixel density, so iOS kills the backgrounded tab and Safari
+   reloads the page when the user comes back. */
+@media (hover: none), (max-width: 760px) {
+  .xstrokes path {
+    filter: none;
+  }
+}
+
 .xstrokes .teal {
   stroke: var(--teal);
 }
