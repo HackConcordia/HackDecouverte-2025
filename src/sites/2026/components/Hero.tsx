@@ -89,7 +89,7 @@ export default function Hero() {
           <DateDisplay />
           <Countdown />
           {/* TODO: point this to your registration page */}
-          <CTAButton href="/register">{t("hero.cta")}</CTAButton>
+          <CTAButton href="https://register.hackdecouverte.io/login">{t("hero.cta")}</CTAButton>
         </div>
 
         <Doodle shape="crown" delay={0.9} style={{ left: "12%", top: "30%", width: 110 }} />
