@@ -1210,6 +1210,11 @@ a {
   align-items: start;
 }
 
+.qa-col {
+  display: grid;
+  gap: 22px;
+}
+
 .q {
   width: 100%;
   display: flex;
@@ -1296,6 +1301,7 @@ a {
 .a p {
   margin: 0 10px;
   background: #fff6c8;
+  border-radius: 10px;
   padding: 16px 18px;
   line-height: 1.6;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
@@ -1846,6 +1852,9 @@ span.sticky {
   .about-grid,
   .qa-grid {
     grid-template-columns: 1fr;
+  }
+  .qa-col {
+    display: contents;
   }
   .qcard:nth-child(n) {
     grid-column: 1;

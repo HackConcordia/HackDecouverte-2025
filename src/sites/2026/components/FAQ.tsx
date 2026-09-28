@@ -19,6 +19,7 @@ const FAQ_SPLATS: SplatSpec[] = [
 export default function FAQ() {
   const { faq } = useLanguage();
   const { ref, inView } = useInView<HTMLElement>();
+  const half = Math.ceil(faq.length / 2);
 
   // Which questions are open (the first one starts open).
   const [openItems, setOpenItems] = useState<Set<number>>(new Set([0]));
@@ -48,24 +49,31 @@ export default function FAQ() {
         </div>
       </div>
 
+      {/* Two independent columns (first half left, second half right) so
+          opening a question only pushes down its own column. */}
       <div className="qa-grid">
-        {faq.map(([question, answer], index) => {
-          const isOpen = openItems.has(index);
+        {[faq.slice(0, half), faq.slice(half)].map((items, column) => (
+          <div key={column} className="qa-col">
+            {items.map(([question, answer], i) => {
+              const index = column * half + i;
+              const isOpen = openItems.has(index);
 
-          return (
-            <div key={index} className={`qa ${isOpen ? "open" : ""}`}>
-              <button className="q" aria-expanded={isOpen} onClick={() => toggle(index)}>
-                <span>{question}</span>
-                <i className="plus" aria-hidden="true" />
-              </button>
-              <div className="a">
-                <div>
-                  <p>{answer}</p>
+              return (
+                <div key={index} className={`qa ${isOpen ? "open" : ""}`}>
+                  <button className="q" aria-expanded={isOpen} onClick={() => toggle(index)}>
+                    <span>{question}</span>
+                    <i className="plus" aria-hidden="true" />
+                  </button>
+                  <div className="a">
+                    <div>
+                      <p>{answer}</p>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-          );
-        })}
+              );
+            })}
+          </div>
+        ))}
       </div>
     </section>
   );
