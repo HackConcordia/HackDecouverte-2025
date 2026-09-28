@@ -88,8 +88,10 @@ export default function Hero() {
           <GraffitiTitle text="HACKDÉCOUVERTE" />
           <DateDisplay />
           <Countdown />
-          {/* TODO: point this to your registration page */}
-          <CTAButton href="https://register.hackdecouverte.io/login">{t("hero.cta")}</CTAButton>
+          {/* TODO: remove `disabled` once registration opens */}
+          <CTAButton href="https://register.hackdecouverte.io/login" disabled>
+            {t("hero.cta")}
+          </CTAButton>
         </div>
 
         <Doodle shape="crown" delay={0.9} style={{ left: "12%", top: "30%", width: 110 }} />

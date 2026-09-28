@@ -1652,9 +1652,21 @@ a {
 }
 
 /* CTAButton renders links, not buttons */
-a.sticky {
+a.sticky,
+span.sticky {
   display: inline-block;
   text-decoration: none;
+}
+
+.sticky.is-disabled,
+.btn.is-disabled {
+  cursor: not-allowed;
+  filter: grayscale(0.7) brightness(0.8);
+}
+
+.sticky.is-disabled:hover {
+  transform: rotate(-2deg);
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.35);
 }
 
 .team-title .highlight {
