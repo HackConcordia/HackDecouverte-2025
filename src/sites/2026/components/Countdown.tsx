@@ -45,16 +45,17 @@ export default function Countdown() {
   }
 
   const units = [
-    { value: timeLeft.days, label: t("countdown.days") },
-    { value: timeLeft.hours, label: t("countdown.hours") },
-    { value: timeLeft.minutes, label: t("countdown.minutes") },
-    { value: timeLeft.seconds, label: t("countdown.seconds") },
+    { id: "days", value: timeLeft.days, label: t("countdown.days") },
+    { id: "hours", value: timeLeft.hours, label: t("countdown.hours") },
+    { id: "minutes", value: timeLeft.minutes, label: t("countdown.minutes") },
+    { id: "seconds", value: timeLeft.seconds, label: t("countdown.seconds") },
   ];
 
   return (
     <div className="countdown" role="timer" aria-live="off">
       {units.map((unit, index) => (
-        <div key={unit.label} className="cd-unit" style={{ animationDelay: `${1.9 + index * 0.1}s` }}>
+        // Keyed by id, not the translated label, so switching EN/FR doesn't remount the tile
+        <div key={unit.id} className="cd-unit" style={{ animationDelay: `${1.9 + index * 0.1}s` }}>
           {/* key={value} restarts the little "flip" animation every time the number changes */}
           <span key={unit.value} className="cd-value">
             {String(unit.value).padStart(2, "0")}
