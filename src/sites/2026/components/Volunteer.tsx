@@ -6,7 +6,7 @@
    banner, then the scribbled links draw their underlines.
    ========================================================================= */
 
-import { Splats, SplatSpec, useInView } from "../lib/graffiti";
+import { cssVars, Splats, SplatSpec, useInView } from "../lib/graffiti";
 import { Lines, useLanguage } from "../lib/i18n";
 
 const VOLUNTEER_SPLATS: SplatSpec[] = [
@@ -18,7 +18,7 @@ const VOLUNTEER_SPLATS: SplatSpec[] = [
 // TODO: point this to your volunteer sign-up form.
 const LINKS = [
   {
-    href: "/register?role=volunteer",
+    href: "https://forms.gle/QbtKmnHsBM34hXJR7",
     textKey: "join.vol",
     color: "#0f9bb4",
     scribble: "M4 8 C40 4 120 4 166 8 M60 14 C120 10 150 20 110 20 C80 20 70 14 100 12",
@@ -65,9 +65,18 @@ export default function Volunteer() {
 
       <div className="join-links">
         {LINKS.map((link) => (
-          <a key={link.textKey} href={link.href} className="scribble">
+          <a
+            key={link.textKey}
+            href={link.href}
+            {...(link.href.startsWith("http") && { target: "_blank", rel: "noopener noreferrer" })}
+            className="scribble"
+            style={cssVars({ "--c": link.color })}
+          >
             <span>
-              <Lines text={t(link.textKey)} />
+              <span>
+                <Lines text={t(link.textKey)} />
+              </span>
+              <i aria-hidden="true">→</i>
             </span>
             <svg viewBox="0 0 170 24" aria-hidden="true">
               <path stroke={link.color} d={link.scribble} />
