@@ -23,11 +23,11 @@ const EXPLORE_LINKS = [
   { href: "#faq", textKey: "nav.faq" },
 ];
 
-// TODO: fill in the "#" links and the contact email.
+const CONTACT_EMAIL = "team.hackconcordia@ecaconcordia.ca";
+
 const INFO_LINKS = [
   { href: "https://github.com/MLH/mlh-policies/blob/main/code-of-conduct.md", textKey: "foot.coc2" },
-  { href: "#", textKey: "foot.a11y" },
-  { href: "mailto:", textKey: "foot.contact" },
+  { href: `mailto:${CONTACT_EMAIL}`, textKey: "foot.contact" },
 ];
 
 const SOCIALS = [
@@ -59,7 +59,7 @@ const SOCIALS = [
   },
   {
     label: "Email",
-    href: "mailto:", // TODO: add the email address after "mailto:"
+    href: `mailto:${CONTACT_EMAIL}`,
     icon: (
       <>
         <rect x="3" y="5" width="18" height="14" rx="2" />

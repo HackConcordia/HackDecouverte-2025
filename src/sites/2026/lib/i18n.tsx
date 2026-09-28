@@ -3,14 +3,16 @@
 /* =========================================================================
    English / French text for the whole site.
 
-   - Wrap the page in <LanguageProvider> (see app/page.tsx).
+   - Wrap the page in <LanguageProvider> (see Page2026.tsx); the starting
+     language comes from the "hd-language" cookie, read in app/page.tsx.
    - In a component: const { t } = useLanguage();  then  t("hero.cta")
    - "\n" in a text = line break (use the <Lines> component to show it).
    ========================================================================= */
 
 import { createContext, Fragment, ReactNode, useContext, useEffect, useState } from "react";
+import { Language, LANGUAGE_COOKIE } from "./language";
 
-export type Language = "en" | "fr";
+export type { Language };
 
 const TEXT: Record<Language, Record<string, string>> = {
   en: {
@@ -69,7 +71,6 @@ const TEXT: Record<Language, Record<string, string>> = {
     "foot.info": "Info",
     "foot.top": "Back to top",
     "foot.coc2": "Code of conduct",
-    "foot.a11y": "Accessibility",
     "foot.contact": "Contact",
   },
 
@@ -129,7 +130,6 @@ const TEXT: Record<Language, Record<string, string>> = {
     "foot.info": "Infos",
     "foot.top": "Retour en haut",
     "foot.coc2": "Code de conduite",
-    "foot.a11y": "Accessibilité",
     "foot.contact": "Contact",
   },
 };
@@ -169,17 +169,24 @@ type LanguageContextValue = {
 
 const LanguageContext = createContext<LanguageContextValue | null>(null);
 
-export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguage] = useState<Language>("en");
+export function LanguageProvider({ children, initialLanguage }: { children: ReactNode; initialLanguage: Language }) {
+  const [language, setLanguage] = useState<Language>(initialLanguage);
 
   // Keep <html lang="..."> in sync (helps screen readers and Google).
   useEffect(() => {
     document.documentElement.lang = language;
   }, [language]);
 
+  const toggleLanguage = () => {
+    const next: Language = language === "en" ? "fr" : "en";
+    setLanguage(next);
+    // Read by the server on the next visit so the page arrives already in this language.
+    document.cookie = `${LANGUAGE_COOKIE}=${next}; path=/; max-age=31536000; samesite=lax`;
+  };
+
   const value: LanguageContextValue = {
     language,
-    toggleLanguage: () => setLanguage((current) => (current === "en" ? "fr" : "en")),
+    toggleLanguage,
     t: (key) => TEXT[language][key] ?? key,
     faq: FAQ_TEXT[language],
   };

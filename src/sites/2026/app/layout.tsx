@@ -1,4 +1,6 @@
 import type { Metadata, Viewport } from "next";
+import { cookies } from "next/headers";
+import { LANGUAGE_COOKIE, parseLanguage } from "../lib/language";
 
 export const metadata: Metadata = {
   title: "HackDécouverte 2026 · HackConcordia",
@@ -11,9 +13,10 @@ export const viewport: Viewport = {
   viewportFit: "cover",
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  const language = parseLanguage((await cookies()).get(LANGUAGE_COOKIE)?.value);
   return (
-    <html lang="en">
+    <html lang={language}>
       <body>{children}</body>
     </html>
   );
