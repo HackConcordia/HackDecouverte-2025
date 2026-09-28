@@ -8,27 +8,77 @@
 
 import { PointerEvent, useState } from "react";
 import { cssVars, round1, Splats, SplatSpec, useInView, usePrefersReducedMotion } from "../lib/graffiti";
-import { useLanguage } from "../lib/i18n";
+import { Language, useLanguage } from "../lib/i18n";
 import SectionTitle from "./SectionTitle";
 
 type Category = "org" | "tech" | "mentor";
 type Filter = "all" | Category;
 
+type Bilingual = Record<Language, string>;
+
 export type TeamMember = {
   name: string;
-  role: string;
+  role: Bilingual;
   category: Category;
-  bio: string;
+  bio: Bilingual;
   photo?: string; // e.g. "/team/maria-christine.jpg" (put the file in /public/team)
 };
 
 export const TEAM_MEMBERS: TeamMember[] = [
-  { name: "Sarah Chen", role: "Lead designer", category: "org", bio: "Shapes the look of HackDécouverte, from the website to the swag." },
-  { name: "Maria-Christine Catiche", role: "Director of Technology", category: "tech", bio: "Leads the tech team and keeps the website, registration and event-day tools running smoothly." },
-  { name: "Priya Patel", role: "Co-director", category: "org", bio: "Plans the schedule, venue and workshops with the organizing team." },
-  { name: "Raouf Ouibrahim", role: "Director of Technology", category: "tech", bio: "Co-leads the tech team and builds the platform participants use to register and check in." },
-  { name: "Camille Roy", role: "Mentor", category: "mentor", bio: "Helps first-time teams pick an idea and ship a working demo." },
-  { name: "Jordan Lee", role: "Mentor", category: "mentor", bio: "Hardware nerd. Ask about Arduino, sensors and anything that blinks." },
+  {
+    name: "Sarah Chen",
+    role: { en: "Lead designer", fr: "Designer principale" },
+    category: "org",
+    bio: {
+      en: "Shapes the look of HackDécouverte, from the website to the swag.",
+      fr: "Façonne l’image de HackDécouverte, du site web jusqu’aux articles promotionnels.",
+    },
+  },
+  {
+    name: "Maria-Christine Catiche",
+    role: { en: "Director of Technology", fr: "Directrice de la technologie" },
+    category: "tech",
+    bio: {
+      en: "Leads the tech team and keeps the website, registration and event-day tools running smoothly.",
+      fr: "Dirige l’équipe tech et veille au bon fonctionnement du site web, des inscriptions et des outils du jour de l’événement.",
+    },
+  },
+  {
+    name: "Priya Patel",
+    role: { en: "Co-director", fr: "Codirectrice" },
+    category: "org",
+    bio: {
+      en: "Plans the schedule, venue and workshops with the organizing team.",
+      fr: "Planifie l’horaire, le lieu et les ateliers avec l’équipe d’organisation.",
+    },
+  },
+  {
+    name: "Raouf Ouibrahim",
+    role: { en: "Director of Technology", fr: "Directeur de la technologie" },
+    category: "tech",
+    bio: {
+      en: "Co-leads the tech team and builds the platform participants use to register and check in.",
+      fr: "Codirige l’équipe tech et développe la plateforme d’inscription et d’enregistrement des participant·e·s.",
+    },
+  },
+  {
+    name: "Camille Roy",
+    role: { en: "Mentor", fr: "Mentor" },
+    category: "mentor",
+    bio: {
+      en: "Helps first-time teams pick an idea and ship a working demo.",
+      fr: "Aide les équipes débutantes à choisir une idée et à livrer une démo fonctionnelle.",
+    },
+  },
+  {
+    name: "Jordan Lee",
+    role: { en: "Mentor", fr: "Mentor" },
+    category: "mentor",
+    bio: {
+      en: "Hardware nerd. Ask about Arduino, sensors and anything that blinks.",
+      fr: "Passionné·e de matériel. Pose-lui tes questions sur Arduino, les capteurs et tout ce qui clignote.",
+    },
+  },
 ];
 
 const FILTERS: { value: Filter; textKey: string }[] = [
@@ -47,6 +97,7 @@ const TEAM_SPLATS: SplatSpec[] = [
 /* ---------- One card ---------- */
 
 function TeamCard({ member, index, animateAsFilter }: { member: TeamMember; index: number; animateAsFilter: boolean }) {
+  const { language } = useLanguage();
   const reducedMotion = usePrefersReducedMotion();
   const [tilt, setTilt] = useState("");
 
@@ -80,8 +131,8 @@ function TeamCard({ member, index, animateAsFilter }: { member: TeamMember; inde
           )}
         </div>
         <h3>{member.name}</h3>
-        <span className="role">{member.role}</span>
-        <p>{member.bio}</p>
+        <span className="role">{member.role[language]}</span>
+        <p>{member.bio[language]}</p>
       </div>
     </article>
   );

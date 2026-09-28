@@ -63,6 +63,8 @@
 html {
   scroll-padding-top: env(safe-area-inset-top, 0px);
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 *,
@@ -77,6 +79,7 @@ body {
   color: var(--text);
   font-family: var(--body);
   overflow-x: hidden;
+  overflow-x: clip;
 }
 
 img,
@@ -1516,7 +1519,7 @@ a {
   position: relative;
   z-index: 1;
   text-align: center;
-  font: 400 clamp(3.2rem, 15vw, 13rem)/0.9 var(--graffiti);
+  font: 400 clamp(2rem, 12vw, 13rem)/0.9 var(--graffiti);
   white-space: nowrap;
   margin: 10px 0 -0.08em;
   user-select: none;

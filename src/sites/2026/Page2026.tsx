@@ -8,10 +8,11 @@ import Hero from "./components/Hero";
 import TeamMemberSection from "./components/TeamMemberSection";
 import Volunteer from "./components/Volunteer";
 import { LanguageProvider } from "./lib/i18n";
+import { Language } from "./lib/language";
 
-export default function HackDecouverte2026() {
+export default function HackDecouverte2026({ language }: { language: Language }) {
   return (
-    <LanguageProvider>
+    <LanguageProvider initialLanguage={language}>
       <Header />
       <main>
         <Hero />
