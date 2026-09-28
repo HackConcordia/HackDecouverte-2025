@@ -1,6 +1,6 @@
 import './globals.css';
-import { TranslationProvider } from '../i18n/TranslationContext';
 import type { Metadata } from 'next';
+import { TranslationProvider } from "@/i18n/TranslationContext";
 import Script from 'next/script';
 
 export const metadata: Metadata = {
