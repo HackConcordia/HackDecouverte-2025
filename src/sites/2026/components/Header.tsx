@@ -17,7 +17,6 @@ const NAV_LINKS = [
   { href: "#about", textKey: "nav.about", tone: "black" },
   { href: "#volunteer", textKey: "nav.volunteer", tone: "white" },
   { href: "#team", textKey: "nav.team", tone: "black" },
-  { href: "#sponsors", textKey: "nav.sponsors", tone: "white" },
   { href: "#faq", textKey: "nav.faq", tone: "black" },
 ] as const;
 

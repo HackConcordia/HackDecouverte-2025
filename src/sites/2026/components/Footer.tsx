@@ -25,7 +25,6 @@ const EXPLORE_LINKS = [
 
 // TODO: fill in the "#" links and the contact email.
 const INFO_LINKS = [
-  { href: "#sponsors", textKey: "foot.sponsors" },
   { href: "https://github.com/MLH/mlh-policies/blob/main/code-of-conduct.md", textKey: "foot.coc2" },
   { href: "#", textKey: "foot.a11y" },
   { href: "mailto:", textKey: "foot.contact" },

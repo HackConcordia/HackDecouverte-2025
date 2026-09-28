@@ -3,7 +3,7 @@
 /* =========================================================================
    SectionTitle
    variant="graffiti" → big black spray-paint title that pops in (About)
-   variant="marker"   → white marker title, optional orange word (Team, Sponsors)
+   variant="marker"   → white marker title, optional orange word (Team)
 
    Examples:
      <SectionTitle variant="graffiti" title="ABOUT US!" />

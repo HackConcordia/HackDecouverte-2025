@@ -3,12 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build --turbopack",
-    "start": "next start",
+    "dev": "next dev src/sites/2026",
+    "build": "next build src/sites/2026",
+    "start": "next start src/sites/2026",
     "lint": "eslint",
     "dev:2026": "next dev src/sites/2026 -p 3026",
-    "dev:2025": "next dev src/sites/2025 -p 3025"
+    "dev:2025": "next dev src/sites/2025 -p 3025",
+    "build:2025": "next build src/sites/2025",
+    "start:2025": "next start src/sites/2025"
   },
   "dependencies": {
     "aos": "^2.3.4",

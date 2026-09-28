@@ -18,7 +18,6 @@ const TEXT: Record<Language, Record<string, string>> = {
     "nav.about": "About",
     "nav.volunteer": "Volunteer",
     "nav.team": "Team",
-    "nav.sponsors": "Sponsors",
     "nav.faq": "FAQ",
 
     // Hero
@@ -57,12 +56,6 @@ const TEXT: Record<Language, Record<string, string>> = {
     "team.tech": "Tech",
     "team.men": "Mentors",
 
-    // Sponsors
-    "sponsors.t1": "Our",
-    "sponsors.t2": "Sponsors",
-    "sponsors.text": "HackDécouverte is free for students thanks to the companies and organizations below.",
-    "sponsors.cta": "Become a sponsor",
-    "sponsors.placeholder": "Your logo here",
 
     // Footer
     "foot.rights": "© 2026 – 2027 HackConcordia. All rights reserved",
@@ -75,7 +68,6 @@ const TEXT: Record<Language, Record<string, string>> = {
     "foot.explore": "Explore",
     "foot.info": "Info",
     "foot.top": "Back to top",
-    "foot.sponsors": "Sponsors",
     "foot.coc2": "Code of conduct",
     "foot.a11y": "Accessibility",
     "foot.contact": "Contact",
@@ -86,7 +78,6 @@ const TEXT: Record<Language, Record<string, string>> = {
     "nav.about": "À propos",
     "nav.volunteer": "Bénévolat",
     "nav.team": "Équipe",
-    "nav.sponsors": "Partenaires",
     "nav.faq": "FAQ",
 
     // Hero
@@ -125,12 +116,6 @@ const TEXT: Record<Language, Record<string, string>> = {
     "team.tech": "Tech",
     "team.men": "Mentors",
 
-    // Sponsors
-    "sponsors.t1": "Nos",
-    "sponsors.t2": "partenaires",
-    "sponsors.text": "HackDécouverte est gratuit pour les élèves grâce aux entreprises et organisations ci-dessous.",
-    "sponsors.cta": "Devenir partenaire",
-    "sponsors.placeholder": "Ton logo ici",
 
     // Footer
     "foot.rights": "© 2026 – 2027 HackConcordia. Tous droits réservés",
@@ -143,7 +128,6 @@ const TEXT: Record<Language, Record<string, string>> = {
     "foot.explore": "Explorer",
     "foot.info": "Infos",
     "foot.top": "Retour en haut",
-    "foot.sponsors": "Partenaires",
     "foot.coc2": "Code de conduite",
     "foot.a11y": "Accessibilité",
     "foot.contact": "Contact",
