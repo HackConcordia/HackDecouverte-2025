@@ -12,7 +12,7 @@ import { cssVars, round1, Splats, SplatSpec, useInView, usePrefersReducedMotion 
 import { Language, useLanguage } from "../lib/i18n";
 import SectionTitle from "./SectionTitle";
 
-type Category = "lead" | "tech" | "sponsorship" | "marketing" | "logistics" | "internal";
+type Category = "lead" | "tech" | "sponsorship" | "marketing" | "logistics" | "events" | "internal" | "finance";
 type Filter = "all" | Category;
 
 type Bilingual = Record<Language, string>;
@@ -28,6 +28,7 @@ export type TeamMember = {
 };
 
 export const TEAM_MEMBERS: TeamMember[] = [
+  // Lead / Exec
   {
     name: "Toby Fischer",
     role: { en: "Co-President", fr: "Co-président" },
@@ -44,43 +45,21 @@ export const TEAM_MEMBERS: TeamMember[] = [
     photo: "/team/Lucia_Jimenez.jpg",
     photoOffset: 7,
   },
+
+  // Technology
   {
     name: "Mohamad Addasi",
     role: { en: "VP of Technology", fr: "VP Technologie" },
     category: "tech",
-    team: "Tech",
+    team: "Technology",
     photo: "/team/Mohamad_Addasi.jpg",
     photoOffset: 15,
-  },
-  {
-    name: "Sarah Tannous",
-    role: { en: "VP of Sponsorship", fr: "VP Commandites" },
-    category: "sponsorship",
-    team: "Sponsorship",
-    photo: "/team/Sarah_Tannous.jpg",
-    photoOffset: 7,
-  },
-  {
-    name: "Ning Ye",
-    role: { en: "VP of Logistics", fr: "VP Logistique" },
-    category: "logistics",
-    team: "Logistics",
-    photo: "/team/Ning_Ye.jpg",
-    photoOffset: 7,
-  },
-  {
-    name: "Noorjahan Kazi",
-    role: { en: "VP of Internal", fr: "VP Interne" },
-    category: "internal",
-    team: "Internal",
-    photo: "/team/Noorjahan_Kazi.jpg",
-    photoOffset: 25,
   },
   {
     name: "Maria-Christine Catiche",
     role: { en: "Director of Technology", fr: "Directrice de la technologie" },
     category: "tech",
-    team: "Tech",
+    team: "Technology",
     photo: "/team/Maria-Christine_Catiche.jpg",
     photoOffset: 7,
   },
@@ -88,7 +67,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     name: "Raouf Ouibrahim",
     role: { en: "Director of Technology", fr: "Directeur de la technologie" },
     category: "tech",
-    team: "Tech",
+    team: "Technology",
     photo: "/team/Raouf_Ouibrahim.jpg",
     photoOffset: 7,
   },
@@ -96,7 +75,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     name: "Mijan Ullah",
     role: { en: "Director of Technology", fr: "Directeur de la technologie" },
     category: "tech",
-    team: "Tech",
+    team: "Technology",
     photo: "/team/Mijan_Ullah.jpg",
     photoOffset: 15,
   },
@@ -104,7 +83,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     name: "Shay Luan",
     role: { en: "Director of Technology", fr: "Directeur de la technologie" },
     category: "tech",
-    team: "Tech",
+    team: "Technology",
     photo: "/team/Shay_Luan.jpg",
     photoOffset: 7,
   },
@@ -112,9 +91,35 @@ export const TEAM_MEMBERS: TeamMember[] = [
     name: "Thomas Assalian",
     role: { en: "Director of Technology", fr: "Directeur de la technologie" },
     category: "tech",
-    team: "Tech",
+    team: "Technology",
     photo: "/team/Thomas_Assalian.jpg",
     photoOffset: 20,
+  },
+  {
+    name: "Daniela Villamizar Useche",
+    role: { en: "Director of Technology", fr: "Directrice de la technologie" },
+    category: "tech",
+    team: "Technology",
+    photo: "/team/Daniela_Villamizar_Useche.jpg",
+    photoOffset: 7,
+  },
+  {
+    name: "Emily Ng",
+    role: { en: "Director of Technology", fr: "Directrice de la technologie" },
+    category: "tech",
+    team: "Technology",
+    photo: "/team/Emily_Ng.jpg",
+    photoOffset: 7,
+  },
+
+  // Sponsorship
+  {
+    name: "Sarah Tannous",
+    role: { en: "VP of Sponsorship", fr: "VP Commandites" },
+    category: "sponsorship",
+    team: "Sponsorship",
+    photo: "/team/Sarah_Tannous.jpg",
+    photoOffset: 7,
   },
   {
     name: "Jovan Gavranovic",
@@ -141,6 +146,40 @@ export const TEAM_MEMBERS: TeamMember[] = [
     photoOffset: 7,
   },
   {
+    name: "Benjamin Liu",
+    role: { en: "Director of Sponsorship", fr: "Directeur des commandites" },
+    category: "sponsorship",
+    team: "Sponsorship",
+    photo: "/team/Benjamin_Liu.jpg",
+    photoOffset: 7,
+  },
+  {
+    name: "Audrey Clara Tchantchou",
+    role: { en: "Director of Sponsorship", fr: "Directrice des commandites" },
+    category: "sponsorship",
+    team: "Sponsorship",
+    photo: "/team/Audrey_Clara_Tchantchou.jpg",
+    photoOffset: 7,
+  },
+  {
+    name: "Grace Ashley",
+    role: { en: "Director of Sponsorship", fr: "Directrice des commandites" },
+    category: "sponsorship",
+    team: "Sponsorship",
+    photo: "/team/Grace_Ashley.jpg",
+    photoOffset: 7,
+  },
+
+  // Marketing
+  {
+    name: "Christina Alexandrakis",
+    role: { en: "VP of Marketing", fr: "VP Marketing" },
+    category: "marketing",
+    team: "Marketing",
+    photo: "/team/Christina_Alexandrakis.jpg",
+    photoOffset: 7,
+  },
+  {
     name: "Matthew Lucas Santiago",
     role: { en: "Director of Marketing", fr: "Directeur du marketing" },
     category: "marketing",
@@ -157,12 +196,92 @@ export const TEAM_MEMBERS: TeamMember[] = [
     photoOffset: 7,
   },
   {
+    name: "Goher Ali Syed",
+    role: { en: "Director of Marketing", fr: "Directeur du marketing" },
+    category: "marketing",
+    team: "Marketing",
+    photo: "/team/Goher_Ali_Syed.jpg",
+    photoOffset: 7,
+  },
+
+  // Logistics
+  {
+    name: "Ning Ye",
+    role: { en: "VP of Logistics", fr: "VP Logistique" },
+    category: "logistics",
+    team: "Logistics",
+    photo: "/team/Ning_Ye.jpg",
+    photoOffset: 7,
+  },
+  {
     name: "Julien Halde",
     role: { en: "Director of Logistics", fr: "Directeur de la logistique" },
     category: "logistics",
     team: "Logistics",
     photo: "/team/Julien_Halde.jpg",
     photoOffset: 10,
+  },
+  {
+    name: "Arthur Huon de Penanster",
+    role: { en: "Director of Logistics", fr: "Directeur de la logistique" },
+    category: "logistics",
+    team: "Logistics",
+    photo: "/team/Arthur_Huon_de_Penanster.jpg",
+    photoOffset: 7,
+  },
+
+  // Events
+  {
+    name: "Andrew Phillips",
+    role: { en: "VP of Events", fr: "VP Événements" },
+    category: "events",
+    team: "Events",
+    photo: "/team/Andrew_Phillips.jpg",
+    photoOffset: 7,
+  },
+  {
+    name: "Alisa Ignatina",
+    role: { en: "Director of Events", fr: "Directrice des événements" },
+    category: "events",
+    team: "Events",
+    photo: "/team/Alisa_Ignatina.jpg",
+    photoOffset: 7,
+  },
+  {
+    name: "Ashley Samerev",
+    role: { en: "Director of Events", fr: "Directrice des événements" },
+    category: "events",
+    team: "Events",
+    photo: "/team/Ashley_Samerev.jpg",
+    photoOffset: 7,
+  },
+
+  // Internal
+  {
+    name: "Noorjahan Kazi",
+    role: { en: "VP of Internal", fr: "VP Interne" },
+    category: "internal",
+    team: "Internal",
+    photo: "/team/Noorjahan_Kazi.jpg",
+    photoOffset: 25,
+  },
+  {
+    name: "Ahmed Fakhir",
+    role: { en: "Director of Internal", fr: "Directeur de l'interne" },
+    category: "internal",
+    team: "Internal",
+    photo: "/team/Ahmed_Fakhir.jpg",
+    photoOffset: 7,
+  },
+
+  // Finance
+  {
+    name: "Amani Magra",
+    role: { en: "VP of Finance", fr: "VP Finances" },
+    category: "finance",
+    team: "Finance",
+    photo: "/team/Amani_Magra.jpg",
+    photoOffset: 7,
   },
 ];
 
@@ -173,8 +292,186 @@ const FILTERS: { value: Filter; textKey: string }[] = [
   { value: "sponsorship", textKey: "team.sponsorship" },
   { value: "logistics", textKey: "team.logistics" },
   { value: "marketing", textKey: "team.marketing" },
+  { value: "events", textKey: "team.events" },
   { value: "internal", textKey: "team.internal" },
+  { value: "finance", textKey: "team.finance" },
 ];
+
+type FilterItem = { value: Filter; textKey: string };
+
+function computeTabRows(
+  items: FilterItem[],
+  widths: number[],
+  containerWidth: number,
+  gap: number
+): FilterItem[][] {
+  const n = items.length;
+  if (n === 0) return [];
+  if (widths.length !== n || containerWidth <= 0) {
+    // Default trapezoid: 5 on line 1, 4 on line 2 (never 1 team on a line)
+    return [items.slice(0, 5), items.slice(5, 9)];
+  }
+
+  const getWidth = (start: number, end: number) => {
+    let sum = 0;
+    for (let i = start; i <= end; i++) {
+      sum += widths[i];
+    }
+    return sum + (end - start) * gap;
+  };
+
+  // 1 line if all items fit comfortably
+  if (getWidth(0, n - 1) <= containerWidth) {
+    return [items];
+  }
+
+  // 2 lines: Trapezoid with top longer than bottom (5 / 4)
+  // Ensures neither line has only 1 team, top is longer than bottom
+  const w5_0 = getWidth(0, 4);
+  const w5_1 = getWidth(5, 8);
+  if (w5_0 <= containerWidth && w5_1 <= containerWidth) {
+    return [items.slice(0, 5), items.slice(5, 9)];
+  }
+
+  // 3 lines: Trapezoid 4 / 3 / 2 (top is longer than bottom, never 1 team on a line)
+  const w4_0 = getWidth(0, 3);
+  const w4_1 = getWidth(4, 6);
+  const w4_2 = getWidth(7, 8);
+  if (w4_0 <= containerWidth && w4_1 <= containerWidth && w4_2 <= containerWidth) {
+    return [items.slice(0, 4), items.slice(4, 7), items.slice(7, 9)];
+  }
+
+  // 3 lines: Balanced 3 / 3 / 3
+  const w3_0 = getWidth(0, 2);
+  const w3_1 = getWidth(3, 5);
+  const w3_2 = getWidth(6, 8);
+  if (w3_0 <= containerWidth && w3_1 <= containerWidth && w3_2 <= containerWidth) {
+    return [items.slice(0, 3), items.slice(3, 6), items.slice(6, 9)];
+  }
+
+  // 4 lines: 3 / 2 / 2 / 2 (top longer than bottom, never 1 team on a line)
+  const w3222_0 = getWidth(0, 2);
+  const w3222_1 = getWidth(3, 4);
+  const w3222_2 = getWidth(5, 6);
+  const w3222_3 = getWidth(7, 8);
+  if (
+    w3222_0 <= containerWidth &&
+    w3222_1 <= containerWidth &&
+    w3222_2 <= containerWidth &&
+    w3222_3 <= containerWidth
+  ) {
+    return [
+      items.slice(0, 3),
+      items.slice(3, 5),
+      items.slice(5, 7),
+      items.slice(7, 9),
+    ];
+  }
+
+  // Fallback: 2 / 2 / 2 / 3 (never only 1 team on a line)
+  return [
+    items.slice(0, 2),
+    items.slice(2, 4),
+    items.slice(4, 6),
+    items.slice(6, 9),
+  ];
+}
+
+function TeamTabs({
+  filter,
+  onChooseFilter,
+}: {
+  filter: Filter;
+  onChooseFilter: (value: Filter) => void;
+}) {
+  const { t, language } = useLanguage();
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [tabRows, setTabRows] = useState<FilterItem[][]>([
+    FILTERS.slice(0, 5),
+    FILTERS.slice(5, 9),
+  ]);
+
+  const updateLayout = useCallback(() => {
+    const container = containerRef.current;
+    if (!container) return;
+    const containerWidth = container.clientWidth;
+    if (containerWidth <= 0) return;
+
+    const buttonMap = new Map<string, number>();
+    container.querySelectorAll<HTMLButtonElement>(".tab").forEach((btn) => {
+      const val = btn.getAttribute("data-tab");
+      if (val) {
+        buttonMap.set(val, btn.getBoundingClientRect().width);
+      }
+    });
+
+    if (buttonMap.size !== FILTERS.length) return;
+
+    const widths = FILTERS.map((f) => buttonMap.get(f.value) || 0);
+    const firstRow = container.querySelector<HTMLElement>(".tabs-row");
+    const gap = firstRow ? parseFloat(getComputedStyle(firstRow).gap) || 24 : 24;
+
+    const nextRows = computeTabRows(FILTERS, widths, containerWidth, gap);
+    setTabRows((prev) => {
+      if (
+        prev.length === nextRows.length &&
+        prev.every((row, i) => row.length === nextRows[i].length)
+      ) {
+        return prev;
+      }
+      return nextRows;
+    });
+  }, []);
+
+  useEffect(() => {
+    updateLayout();
+    const container = containerRef.current;
+    if (!container) return;
+
+    let resizeObserver: ResizeObserver | null = null;
+    if (typeof ResizeObserver !== "undefined") {
+      resizeObserver = new ResizeObserver(() => {
+        updateLayout();
+      });
+      resizeObserver.observe(container);
+    }
+
+    window.addEventListener("resize", updateLayout);
+    const timer = setTimeout(updateLayout, 50);
+
+    return () => {
+      if (resizeObserver) resizeObserver.disconnect();
+      window.removeEventListener("resize", updateLayout);
+      clearTimeout(timer);
+    };
+  }, [updateLayout, language]);
+
+  return (
+    <div
+      ref={containerRef}
+      className="tabs"
+      role="tablist"
+      aria-label="Team category filters"
+    >
+      {tabRows.map((row, rowIndex) => (
+        <div key={rowIndex} className="tabs-row" role="presentation">
+          {row.map((item) => (
+            <button
+              key={item.value}
+              data-tab={item.value}
+              className="tab"
+              role="tab"
+              aria-selected={filter === item.value}
+              onClick={() => onChooseFilter(item.value)}
+            >
+              {t(item.textKey)}
+            </button>
+          ))}
+        </div>
+      ))}
+    </div>
+  );
+}
 
 const TEAM_SPLATS: SplatSpec[] = [
   ["pink", 8, 4, 210], ["yellow", 2, 40, 250], ["pink", 98, 30, 230],
@@ -218,7 +515,6 @@ function TeamCard({ member, index, animateAsFilter }: { member: TeamMember; inde
             <img
               src={member.photo}
               alt={member.name}
-              loading="lazy"
               style={avatarStyle}
             />
           ) : (
@@ -321,19 +617,7 @@ export default function TeamMemberSection() {
       <SectionTitle title={t("team.t1")} highlight={t("team.t2")} />
 
       {/* Team Filter Tabs */}
-      <div className="tabs" role="tablist" aria-label="Team category filters">
-        {FILTERS.map((item) => (
-          <button
-            key={item.value}
-            className="tab"
-            role="tab"
-            aria-selected={filter === item.value}
-            onClick={() => chooseFilter(item.value)}
-          >
-            {t(item.textKey)}
-          </button>
-        ))}
-      </div>
+      <TeamTabs filter={filter} onChooseFilter={chooseFilter} />
 
       <div
         className="team-carousel-container"

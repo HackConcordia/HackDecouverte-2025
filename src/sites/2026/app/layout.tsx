@@ -92,8 +92,8 @@ export const viewport: Viewport = {
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const language = parseLanguage((await cookies()).get(LANGUAGE_COOKIE)?.value);
   return (
-    <html lang={language}>
-      <body>
+    <html lang={language} suppressHydrationWarning>
+      <body suppressHydrationWarning>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(EVENT_JSON_LD) }}
