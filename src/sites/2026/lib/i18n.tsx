@@ -53,8 +53,12 @@ const TEXT: Record<Language, Record<string, string>> = {
     "team.t1": "Meet the",
     "team.t2": "Team",
     "team.all": "All",
-    "team.org": "Organizing",
+    "team.lead": "Exec",
     "team.tech": "Tech",
+    "team.sponsorship": "Sponsorship",
+    "team.logistics": "Logistics",
+    "team.marketing": "Marketing",
+    "team.internal": "Internal",
 
     // Footer
     "foot.rights": "© 2026 – 2027 HackConcordia. All rights reserved",
@@ -109,8 +113,12 @@ const TEXT: Record<Language, Record<string, string>> = {
     "team.t1": "Rencontre",
     "team.t2": "l’équipe",
     "team.all": "Tous",
-    "team.org": "Organisation",
+    "team.lead": "Direction",
     "team.tech": "Tech",
+    "team.sponsorship": "Commandites",
+    "team.logistics": "Logistique",
+    "team.marketing": "Marketing",
+    "team.internal": "Interne",
 
     // Footer
     "foot.rights": "© 2026 – 2027 HackConcordia. Tous droits réservés",

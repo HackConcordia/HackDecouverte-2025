@@ -1022,6 +1022,187 @@ a {
   transform: rotate(-4deg);
 }
 
+.team-carousel-container {
+  position: relative;
+  z-index: 2;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.team-carousel-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  position: relative;
+}
+
+.carousel-viewport {
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding: 20px 10px 30px;
+  flex: 1;
+}
+
+.carousel-viewport::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 22px;
+  width: max-content;
+  min-width: 100%;
+}
+
+.carousel-track.is-centered {
+  justify-content: center;
+}
+
+.carousel-track .card {
+  scroll-snap-align: start;
+  flex: 0 0 255px;
+  width: 255px;
+}
+
+.carousel-arrow {
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--yellow);
+  color: #000;
+  border: 3px solid #000;
+  box-shadow: 4px 4px 0 #000;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s cubic-bezier(0.2, 1.5, 0.4, 1), background 0.2s, box-shadow 0.2s, opacity 0.2s;
+  z-index: 5;
+  user-select: none;
+}
+
+.carousel-arrow svg {
+  width: 26px;
+  height: 26px;
+  stroke: #000;
+  stroke-width: 3.5;
+  transition: stroke 0.2s, transform 0.2s;
+}
+
+.carousel-arrow:hover:not(:disabled) {
+  transform: scale(1.12) rotate(-4deg);
+  background: var(--pink);
+  box-shadow: 5px 5px 0 #000;
+}
+
+.carousel-arrow:hover:not(:disabled) svg {
+  stroke: #fff;
+}
+
+.carousel-arrow.next:hover:not(:disabled) {
+  transform: scale(1.12) rotate(4deg);
+}
+
+.carousel-arrow:active:not(:disabled) {
+  transform: scale(0.95) translate(2px, 2px);
+  box-shadow: 2px 2px 0 #000;
+}
+
+.carousel-arrow:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: 2px 2px 0 #000;
+  background: #dcdad5;
+}
+
+.carousel-arrow:disabled svg {
+  stroke: #777;
+}
+
+/* Pagination & controls */
+.carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 10px;
+  position: relative;
+  z-index: 3;
+}
+
+.carousel-counter {
+  font-family: var(--marker);
+  font-size: 0.95rem;
+  color: #fff;
+  text-shadow: 1.5px 1.5px 0 #000;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 4px 14px;
+  border-radius: 999px;
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  letter-spacing: 0.04em;
+  user-select: none;
+}
+
+.carousel-dots {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.carousel-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.35);
+  border: 1.5px solid #000;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.2s cubic-bezier(0.2, 1.5, 0.4, 1);
+}
+
+.carousel-dot:hover:not(.active) {
+  background: rgba(255, 255, 255, 0.8);
+  transform: scale(1.25);
+}
+
+.carousel-dot.active {
+  background: var(--yellow);
+  width: 24px;
+  border-radius: 6px;
+  transform: scale(1.1);
+  box-shadow: 2px 2px 0 #000;
+}
+
+.carousel-mobile-arrows {
+  display: none;
+}
+
+@media (max-width: 680px) {
+  .team-carousel-row > .carousel-arrow {
+    display: none;
+  }
+  .carousel-mobile-arrows {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .carousel-mobile-arrows .carousel-arrow {
+    width: 44px;
+    height: 44px;
+  }
+  .carousel-track .card {
+    flex: 0 0 78vw;
+    width: 78vw;
+    max-width: 280px;
+  }
+}
+
 .grid {
   position: relative;
   z-index: 2;
@@ -1082,6 +1263,9 @@ a {
     transform 0.18s ease-out,
     box-shadow 0.3s;
   transform-style: preserve-3d;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .card:hover .card-in {
@@ -1773,6 +1957,14 @@ span.sticky {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
+  --offset-y: 0%;
+  transform: translateY(var(--offset-y));
+  transition: transform 0.35s ease;
+}
+
+.card:hover .avatar img {
+  transform: translateY(var(--offset-y)) scale(1.05);
 }
 
 /* --- Countdown --- */
