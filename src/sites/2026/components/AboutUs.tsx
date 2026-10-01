@@ -51,7 +51,6 @@ export default function AboutUs() {
   return (
     <section ref={sectionRef} id="about" className={`about paper ${inView ? "in" : ""}`}>
       <Splats splats={ABOUT_SPLATS} />
-      <div className="tape" />
       <div className="qmark" ref={questionMarkRef} aria-hidden="true">
         ?
       </div>

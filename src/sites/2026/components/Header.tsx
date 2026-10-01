@@ -15,7 +15,7 @@ import { useLanguage } from "../lib/i18n";
 
 const NAV_LINKS = [
   { href: "#about", textKey: "nav.about", tone: "black" },
-  { href: "#volunteer", textKey: "nav.volunteer", tone: "white" },
+  { href: "#volunteer", textKey: "nav.volunteer", tone: "black" },
   { href: "#team", textKey: "nav.team", tone: "black" },
   { href: "#faq", textKey: "nav.faq", tone: "black" },
 ] as const;
