@@ -63,6 +63,21 @@ export default function Volunteer() {
         </svg>
       </div>
 
+      <div className="volunteer-showcase">
+        <div className="volunteer-polaroid">
+          <div className="volunteer-tape-l" aria-hidden="true" />
+          <div className="volunteer-tape-r" aria-hidden="true" />
+          <div className="volunteer-img-wrap">
+            <img
+              src="/images/volunteer-team.png"
+              alt={t("join.imgAlt")}
+              loading="lazy"
+            />
+          </div>
+          <span className="volunteer-caption">{t("join.caption")}</span>
+        </div>
+      </div>
+
       <div className="join-links">
         {LINKS.map((link) => (
           <a

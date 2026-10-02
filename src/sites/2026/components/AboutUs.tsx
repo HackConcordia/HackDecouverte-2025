@@ -55,20 +55,61 @@ export default function AboutUs() {
         ?
       </div>
 
-      <Doodle shape="star" strokeWidth={7} style={{ left: "6%", top: "52%", width: 120 }} />
-      <Doodle shape="star" strokeWidth={8} delay={0.3} style={{ left: "18%", top: "68%", width: 70 }} />
-      <Doodle shape="triangle" color="#ff5fc1" delay={0.5} style={{ left: "42%", top: "50%", width: 90 }} />
-      <Doodle shape="crown" color="#ffdf5e" strokeWidth={7} delay={0.7} style={{ left: "47%", top: "70%", width: 120 }} />
+      <Doodle shape="star" strokeWidth={7} style={{ left: "5%", top: "35%", width: 110 }} />
+      <Doodle shape="triangle" color="#ff5fc1" delay={0.3} style={{ left: "88%", top: "18%", width: 85 }} />
+      <Doodle shape="crown" color="#ffdf5e" strokeWidth={7} delay={0.5} style={{ left: "4%", top: "72%", width: 110 }} />
+      <Doodle shape="star" strokeWidth={8} delay={0.7} style={{ left: "90%", top: "65%", width: 75 }} />
 
       <SectionTitle variant="graffiti" title={t("about.title")} />
 
       <div className="about-grid">
-        {QUESTIONS.map((item) => (
-          <Reveal key={item.question} anim={item.anim} delay={item.delay} className="qcard">
-            <h3>{t(item.question)}</h3>
-            <p>{t(item.answer)}</p>
-          </Reveal>
-        ))}
+        {/* Q1: What is a Hackathon? */}
+        <Reveal anim="left" delay={0} className="qcard qcard-1">
+          <h3>{t("about.q1")}</h3>
+          <p>{t("about.a1")}</p>
+        </Reveal>
+
+        {/* Photo 1: Team Collaborating at Table */}
+        <Reveal anim="right" delay={0.15} className="about-polaroid about-polaroid-1">
+          <div className="polaroid-inner">
+            <div className="polaroid-tape" aria-hidden="true" />
+            <div className="polaroid-img-wrap">
+              <img
+                src="/images/about-hackers.jpg"
+                alt={t("about.img.hackers")}
+                loading="lazy"
+              />
+            </div>
+            <span className="polaroid-caption">{t("about.caption.hackers")}</span>
+          </div>
+        </Reveal>
+
+        {/* Photo 2: Students with Swag Bags */}
+        <Reveal anim="left" delay={0.25} className="about-polaroid about-polaroid-2">
+          <div className="polaroid-inner">
+            <div className="polaroid-tape" aria-hidden="true" />
+            <div className="polaroid-img-wrap">
+              <img
+                src="/images/about-swag.jpg"
+                alt={t("about.img.swag")}
+                loading="lazy"
+              />
+            </div>
+            <span className="polaroid-caption">{t("about.caption.swag")}</span>
+          </div>
+        </Reveal>
+
+        {/* Q2: What is HackDécouverte? */}
+        <Reveal anim="right" delay={0.35} className="qcard qcard-2">
+          <h3>{t("about.q2")}</h3>
+          <p>{t("about.a2")}</p>
+        </Reveal>
+
+        {/* Q3: What is HackConcordia? */}
+        <Reveal anim="pop" delay={0.45} className="qcard qcard-3">
+          <h3>{t("about.q3")}</h3>
+          <p>{t("about.a3")}</p>
+        </Reveal>
       </div>
     </section>
   );

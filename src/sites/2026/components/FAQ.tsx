@@ -17,7 +17,7 @@ const FAQ_SPLATS: SplatSpec[] = [
 ];
 
 export default function FAQ() {
-  const { faq } = useLanguage();
+  const { faq, t } = useLanguage();
   const { ref, inView } = useInView<HTMLElement>();
   const half = Math.ceil(faq.length / 2);
 
@@ -46,6 +46,21 @@ export default function FAQ() {
             </svg>
             <b>FAQ</b>
           </div>
+        </div>
+      </div>
+
+      {/* Action snapshot polaroid */}
+      <div className="faq-showcase">
+        <div className="faq-polaroid">
+          <div className="faq-tape" aria-hidden="true" />
+          <div className="faq-img-wrap">
+            <img
+              src="/images/faq-hackers.png"
+              alt={t("faq.imgAlt")}
+              loading="lazy"
+            />
+          </div>
+          <span className="faq-caption">{t("faq.caption")}</span>
         </div>
       </div>
 

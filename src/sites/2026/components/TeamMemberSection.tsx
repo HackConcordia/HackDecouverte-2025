@@ -283,6 +283,30 @@ export const TEAM_MEMBERS: TeamMember[] = [
     photo: "/team/Amani_Magra.jpg",
     photoOffset: 7,
   },
+
+  {
+    name: "Abdou Maouda",
+    role: { en: "Director of Technology", fr: "Directeur de la technologie" },
+    category: "tech",
+    team: "Technology",
+    photo: "/team/Abdou_Maouda.jpg",
+    photoOffset: 7,
+  },
+  {
+    name: "Ellen Ung",
+    role: { en: "Director of Marketing", fr: "Directrice du marketing" },
+    category: "marketing",
+    team: "Marketing",
+    photo: "/team/Ellen_Ung.jpg",
+  },
+  {
+    name: "Luella Mailloux",
+    role: { en: "Director of Events", fr: "Directrice des événements" },
+    category: "events",
+    team: "Events",
+    photo: "/team/Luella_Mailloux.png",
+    photoOffset: 7,
+  },
 ];
 
 const FILTERS: { value: Filter; textKey: string }[] = [
@@ -686,21 +710,40 @@ export default function TeamMemberSection() {
             </div>
           )}
 
-          {/* Dots Indicator (visible when more than 1 page) */}
-          {isScrollable && totalSlides > 1 && (
-            <div className="carousel-dots" role="tablist" aria-label="Carousel pagination">
-              {Array.from({ length: totalSlides }).map((_, i) => (
-                <button
-                  key={i}
-                  type="button"
-                  className={`carousel-dot ${activeSlide === i ? "active" : ""}`}
-                  onClick={() => scrollToSlide(i)}
-                  aria-label={`Go to slide ${i + 1}`}
-                  aria-selected={activeSlide === i}
-                />
-              ))}
-            </div>
-          )}
+          {/* Dots Indicator (visible when more than 1 page, capped to max 5 sliding dots) */}
+          {isScrollable && totalSlides > 1 && (() => {
+            const MAX_DOTS = 5;
+            const showSliding = totalSlides > MAX_DOTS;
+            const halfWindow = Math.floor(MAX_DOTS / 2);
+            const startDot = showSliding
+              ? Math.max(0, Math.min(activeSlide - halfWindow, totalSlides - MAX_DOTS))
+              : 0;
+            const dotCount = Math.min(totalSlides, MAX_DOTS);
+
+            return (
+              <div className="carousel-dots" role="tablist" aria-label="Carousel pagination">
+                {Array.from({ length: dotCount }).map((_, idx) => {
+                  const slideIndex = startDot + idx;
+                  const isActive = activeSlide === slideIndex;
+                  const isEdgeLeft = showSliding && idx === 0 && startDot > 0;
+                  const isEdgeRight = showSliding && idx === MAX_DOTS - 1 && startDot + MAX_DOTS < totalSlides;
+
+                  return (
+                    <button
+                      key={slideIndex}
+                      type="button"
+                      className={`carousel-dot ${isActive ? "active" : ""} ${
+                        isEdgeLeft || isEdgeRight ? "edge" : ""
+                      }`}
+                      onClick={() => scrollToSlide(slideIndex)}
+                      aria-label={`Go to slide ${slideIndex + 1}`}
+                      aria-selected={isActive}
+                    />
+                  );
+                })}
+              </div>
+            );
+          })()}
 
           {/* Member Count Pill */}
           <div className="carousel-counter">
