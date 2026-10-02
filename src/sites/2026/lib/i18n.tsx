@@ -75,6 +75,10 @@ const TEXT: Record<Language, Record<string, string>> = {
     "foot.top": "Back to top",
     "foot.coc2": "Code of conduct",
     "foot.contact": "Contact",
+
+    // Dock
+    "dock.spray.disable": "Disable cursor effects",
+    "dock.spray.enable": "Enable cursor effects",
   },
 
   fr: {
@@ -137,6 +141,10 @@ const TEXT: Record<Language, Record<string, string>> = {
     "foot.top": "Retour en haut",
     "foot.coc2": "Code de conduite",
     "foot.contact": "Contact",
+
+    // Dock
+    "dock.spray.disable": "Désactiver les effets de curseur",
+    "dock.spray.enable": "Activer les effets de curseur",
   },
 };
 

@@ -27,7 +27,6 @@ const CONTACT_EMAIL = "team.hackconcordia@ecaconcordia.ca";
 
 const INFO_LINKS = [
   { href: "https://github.com/MLH/mlh-policies/blob/main/code-of-conduct.md", textKey: "foot.coc2" },
-  { href: `mailto:${CONTACT_EMAIL}`, textKey: "foot.contact" },
 ];
 
 const SOCIALS = [
