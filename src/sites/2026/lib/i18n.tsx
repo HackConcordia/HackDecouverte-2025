@@ -43,18 +43,34 @@ const TEXT: Record<Language, Record<string, string>> = {
     "about.a2": "HackDécouverte is a bilingual, beginner-friendly hackathon for pre-university students across Québec.",
     "about.q3": "WHAT IS HACKCONCORDIA?",
     "about.a3": "HackConcordia is a student-run organization at Concordia University that fosters innovation and collaboration among students.",
+    "about.caption.hackers": "GOOD VIBES ONLY ✨",
+    "about.img.hackers": "HackDécouverte attendees chilling together and making friends",
+    "about.caption.swag": "SWAG & SMILES ★",
+    "about.img.swag": "Students with HackDécouverte swag bags",
 
     // Volunteer
     "join.t1": "JOIN THE TEAM",
     "join.t2": "BEHIND THE SCENES!",
     "join.vol": "BECOME A\nVOLUNTEER",
+    "join.caption": "CREW & EXCLUSIVE MERCH ★",
+    "join.imgAlt": "HackDécouverte team members presenting official event t-shirts",
 
     // Team
     "team.t1": "Meet the",
     "team.t2": "Team",
     "team.all": "All",
-    "team.org": "Organizing",
-    "team.tech": "Tech",
+    "team.lead": "Exec",
+    "team.tech": "Technology",
+    "team.sponsorship": "Sponsorship",
+    "team.logistics": "Logistics",
+    "team.marketing": "Marketing",
+    "team.internal": "Internal",
+    "team.events": "Events",
+    "team.finance": "Finance",
+
+    // FAQ
+    "faq.caption": "HACKING IN ACTION ⚡",
+    "faq.imgAlt": "Students collaboratively coding on laptops during HackDécouverte",
 
     // Footer
     "foot.rights": "© 2026 – 2027 HackConcordia. All rights reserved",
@@ -69,6 +85,10 @@ const TEXT: Record<Language, Record<string, string>> = {
     "foot.top": "Back to top",
     "foot.coc2": "Code of conduct",
     "foot.contact": "Contact",
+
+    // Dock
+    "dock.spray.disable": "Disable cursor effects",
+    "dock.spray.enable": "Enable cursor effects",
   },
 
   fr: {
@@ -99,18 +119,34 @@ const TEXT: Record<Language, Record<string, string>> = {
     "about.a2": "HackDécouverte est un hackathon bilingue et accessible aux débutant·e·s, pour les élèves préuniversitaires de partout au Québec.",
     "about.q3": "C’EST QUOI HACKCONCORDIA?",
     "about.a3": "HackConcordia est une organisation étudiante de l’Université Concordia qui encourage l’innovation et la collaboration entre étudiant·e·s.",
+    "about.caption.hackers": "QUE DES BONNES VIBES ✨",
+    "about.img.hackers": "Participant·e·s de HackDécouverte relaxant ensemble et créant des liens",
+    "about.caption.swag": "SOURIRES & CADEAUX ★",
+    "about.img.swag": "Élèves avec leurs sacs cadeaux HackDécouverte",
 
     // Volunteer
     "join.t1": "JOINS L’ÉQUIPE",
     "join.t2": "DANS LES COULISSES!",
     "join.vol": "DEVIENS\nBÉNÉVOLE",
+    "join.caption": "L’ÉQUIPE & LE MERCH OFFICIEL ★",
+    "join.imgAlt": "Membres de l'équipe HackDécouverte présentant les t-shirts officiels",
 
     // Team
     "team.t1": "Rencontre",
     "team.t2": "l’équipe",
     "team.all": "Tous",
-    "team.org": "Organisation",
-    "team.tech": "Tech",
+    "team.lead": "Direction",
+    "team.tech": "Technologie",
+    "team.sponsorship": "Commandites",
+    "team.logistics": "Logistique",
+    "team.marketing": "Marketing",
+    "team.internal": "Interne",
+    "team.events": "Événements",
+    "team.finance": "Finances",
+
+    // FAQ
+    "faq.caption": "AU CŒUR DE L’ACTION ⚡",
+    "faq.imgAlt": "Élèves programmant en équipe sur leurs ordinateurs pendant HackDécouverte",
 
     // Footer
     "foot.rights": "© 2026 – 2027 HackConcordia. Tous droits réservés",
@@ -125,6 +161,10 @@ const TEXT: Record<Language, Record<string, string>> = {
     "foot.top": "Retour en haut",
     "foot.coc2": "Code de conduite",
     "foot.contact": "Contact",
+
+    // Dock
+    "dock.spray.disable": "Désactiver les effets de curseur",
+    "dock.spray.enable": "Activer les effets de curseur",
   },
 };
 
