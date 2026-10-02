@@ -1496,6 +1496,7 @@ a {
 }
 
 .avatar {
+  position: relative;
   aspect-ratio: 1/1;
   border-radius: 8px;
   background: #e3e4e6;
@@ -2257,6 +2258,13 @@ span.sticky {
 }
 
 .avatar img {
+  /* Absolutely positioned so the photo always fills the square avatar box.
+     Safari does not resolve height:100% on a grid item when the grid
+     container's height comes from aspect-ratio, which left a gray gap at
+     the top and a cut-off photo on iOS. Inset sizing avoids that. */
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
