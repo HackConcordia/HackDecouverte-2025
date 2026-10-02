@@ -24,7 +24,7 @@ export type TeamMember = {
   team: string;
   bio?: Bilingual;
   photo?: string;
-  photoPosition?: number; // vertical crop focus: 0 = top of photo, 100 = bottom (default 50)
+  photoPosition?: number; // vertical crop focus: 0 = top of photo, 100 = bottom (default 10)
 };
 
 export const TEAM_MEMBERS: TeamMember[] = [
@@ -35,7 +35,6 @@ export const TEAM_MEMBERS: TeamMember[] = [
     category: "lead",
     team: "Lead",
     photo: "/team/Toby_Fischer.jpg",
-    photoPosition: 78,
   },
   {
     name: "Lucia Jimenez",
@@ -43,7 +42,6 @@ export const TEAM_MEMBERS: TeamMember[] = [
     category: "lead",
     team: "Lead",
     photo: "/team/Lucia_Jimenez.jpg",
-    photoPosition: 78,
   },
 
   // Technology
@@ -53,7 +51,6 @@ export const TEAM_MEMBERS: TeamMember[] = [
     category: "tech",
     team: "Technology",
     photo: "/team/Mohamad_Addasi.jpg",
-    photoPosition: 100,
   },
   {
     name: "Maria-Christine Catiche",
@@ -61,7 +58,6 @@ export const TEAM_MEMBERS: TeamMember[] = [
     category: "tech",
     team: "Technology",
     photo: "/team/Maria-Christine_Catiche.jpg",
-    photoPosition: 78,
   },
   {
     name: "Raouf Ouibrahim",
@@ -69,7 +65,6 @@ export const TEAM_MEMBERS: TeamMember[] = [
     category: "tech",
     team: "Technology",
     photo: "/team/Raouf_Ouibrahim.jpg",
-    photoPosition: 78,
   },
   {
     name: "Mijan Ullah",
@@ -77,7 +72,6 @@ export const TEAM_MEMBERS: TeamMember[] = [
     category: "tech",
     team: "Technology",
     photo: "/team/Mijan_Ullah.jpg",
-    photoPosition: 100,
   },
   {
     name: "Shay Luan",
@@ -85,7 +79,6 @@ export const TEAM_MEMBERS: TeamMember[] = [
     category: "tech",
     team: "Technology",
     photo: "/team/Shay_Luan.jpg",
-    photoPosition: 78,
   },
   {
     name: "Thomas Assalian",
@@ -93,7 +86,6 @@ export const TEAM_MEMBERS: TeamMember[] = [
     category: "tech",
     team: "Technology",
     photo: "/team/Thomas_Assalian.jpg",
-    photoPosition: 100,
   },
   {
     name: "Daniela Villamizar Useche",
@@ -101,7 +93,6 @@ export const TEAM_MEMBERS: TeamMember[] = [
     category: "tech",
     team: "Technology",
     photo: "/team/Daniela_Villamizar_Useche.jpg",
-    photoPosition: 78,
   },
   {
     name: "Emily Ng",
@@ -109,7 +100,6 @@ export const TEAM_MEMBERS: TeamMember[] = [
     category: "tech",
     team: "Technology",
     photo: "/team/Emily_Ng.jpg",
-    photoPosition: 78,
   },
 
   // Sponsorship
@@ -119,7 +109,6 @@ export const TEAM_MEMBERS: TeamMember[] = [
     category: "sponsorship",
     team: "Sponsorship",
     photo: "/team/Sarah_Tannous.jpg",
-    photoPosition: 78,
   },
   {
     name: "Jovan Gavranovic",
@@ -127,7 +116,6 @@ export const TEAM_MEMBERS: TeamMember[] = [
     category: "sponsorship",
     team: "Sponsorship",
     photo: "/team/Jovan_Gavranovic.jpg",
-    photoPosition: 100,
   },
   {
     name: "Mamadou Camara",
@@ -135,7 +123,6 @@ export const TEAM_MEMBERS: TeamMember[] = [
     category: "sponsorship",
     team: "Sponsorship",
     photo: "/team/Mamadou_Camara.jpg",
-    photoPosition: 78,
   },
   {
     name: "Salma Benlemlih",
@@ -143,7 +130,6 @@ export const TEAM_MEMBERS: TeamMember[] = [
     category: "sponsorship",
     team: "Sponsorship",
     photo: "/team/Salma_Benlemlih.jpg",
-    photoPosition: 78,
   },
   {
     name: "Benjamin Liu",
@@ -151,7 +137,6 @@ export const TEAM_MEMBERS: TeamMember[] = [
     category: "sponsorship",
     team: "Sponsorship",
     photo: "/team/Benjamin_Liu.jpg",
-    photoPosition: 78,
   },
   {
     name: "Audrey Clara Tchantchou",
@@ -159,7 +144,6 @@ export const TEAM_MEMBERS: TeamMember[] = [
     category: "sponsorship",
     team: "Sponsorship",
     photo: "/team/Audrey_Clara_Tchantchou.jpg",
-    photoPosition: 78,
   },
   {
     name: "Grace Ashley",
@@ -167,7 +151,6 @@ export const TEAM_MEMBERS: TeamMember[] = [
     category: "sponsorship",
     team: "Sponsorship",
     photo: "/team/Grace_Ashley.jpg",
-    photoPosition: 78,
   },
 
   // Marketing
@@ -177,7 +160,6 @@ export const TEAM_MEMBERS: TeamMember[] = [
     category: "marketing",
     team: "Marketing",
     photo: "/team/Christina_Alexandrakis.jpg",
-    photoPosition: 78,
   },
   {
     name: "Matthew Lucas Santiago",
@@ -185,7 +167,6 @@ export const TEAM_MEMBERS: TeamMember[] = [
     category: "marketing",
     team: "Marketing",
     photo: "/team/Matthew_Lucas_Santiago.jpg",
-    photoPosition: 78,
   },
   {
     name: "Seydina Gueye",
@@ -193,7 +174,6 @@ export const TEAM_MEMBERS: TeamMember[] = [
     category: "marketing",
     team: "Marketing",
     photo: "/team/Seydina_Gueye.jpg",
-    photoPosition: 78,
   },
   {
     name: "Goher Ali Syed",
@@ -201,7 +181,6 @@ export const TEAM_MEMBERS: TeamMember[] = [
     category: "marketing",
     team: "Marketing",
     photo: "/team/Goher_Ali_Syed.jpg",
-    photoPosition: 78,
   },
 
   // Logistics
@@ -211,7 +190,6 @@ export const TEAM_MEMBERS: TeamMember[] = [
     category: "logistics",
     team: "Logistics",
     photo: "/team/Ning_Ye.jpg",
-    photoPosition: 78,
   },
   {
     name: "Julien Halde",
@@ -219,7 +197,6 @@ export const TEAM_MEMBERS: TeamMember[] = [
     category: "logistics",
     team: "Logistics",
     photo: "/team/Julien_Halde.jpg",
-    photoPosition: 90,
   },
   {
     name: "Arthur Huon de Penanster",
@@ -227,7 +204,6 @@ export const TEAM_MEMBERS: TeamMember[] = [
     category: "logistics",
     team: "Logistics",
     photo: "/team/Arthur_Huon_de_Penanster.jpg",
-    photoPosition: 78,
   },
 
   // Events
@@ -237,7 +213,6 @@ export const TEAM_MEMBERS: TeamMember[] = [
     category: "events",
     team: "Events",
     photo: "/team/Andrew_Phillips.jpg",
-    photoPosition: 78,
   },
   {
     name: "Alisa Ignatina",
@@ -245,7 +220,6 @@ export const TEAM_MEMBERS: TeamMember[] = [
     category: "events",
     team: "Events",
     photo: "/team/Alisa_Ignatina.jpg",
-    photoPosition: 78,
   },
   {
     name: "Ashley Samerev",
@@ -253,7 +227,6 @@ export const TEAM_MEMBERS: TeamMember[] = [
     category: "events",
     team: "Events",
     photo: "/team/Ashley_Samerev.jpg",
-    photoPosition: 78,
   },
 
   // Internal
@@ -263,7 +236,6 @@ export const TEAM_MEMBERS: TeamMember[] = [
     category: "internal",
     team: "Internal",
     photo: "/team/Noorjahan_Kazi.jpg",
-    photoPosition: 100,
   },
   {
     name: "Ahmed Fakhir",
@@ -271,7 +243,6 @@ export const TEAM_MEMBERS: TeamMember[] = [
     category: "internal",
     team: "Internal",
     photo: "/team/Ahmed_Fakhir.jpg",
-    photoPosition: 78,
   },
 
   // Finance
@@ -281,7 +252,6 @@ export const TEAM_MEMBERS: TeamMember[] = [
     category: "finance",
     team: "Finance",
     photo: "/team/Amani_Magra.jpg",
-    photoPosition: 78,
   },
 
   {
@@ -290,7 +260,6 @@ export const TEAM_MEMBERS: TeamMember[] = [
     category: "tech",
     team: "Technology",
     photo: "/team/Abdou_Maouda.jpg",
-    photoPosition: 78,
   },
   {
     name: "Ellen Ung",
@@ -305,7 +274,6 @@ export const TEAM_MEMBERS: TeamMember[] = [
     category: "events",
     team: "Events",
     photo: "/team/Luella_Mailloux.png",
-    photoPosition: 78,
   },
 ];
 
@@ -520,7 +488,7 @@ function TeamCard({ member, index, animateAsFilter }: { member: TeamMember; inde
   };
 
   const avatarStyle = cssVars({
-    "--pos-y": `${member.photoPosition ?? 50}%`,
+    "--pos-y": `${member.photoPosition ?? 10}%`,
   });
 
   return (
