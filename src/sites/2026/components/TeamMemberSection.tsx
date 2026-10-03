@@ -53,7 +53,6 @@ export const TEAM_MEMBERS: TeamMember[] = [
     category: "tech",
     team: "Technology",
     photo: "/team/Mohamad_Addasi.jpg",
-    photoOffset: 15,
   },
   {
     name: "Maria-Christine Catiche",
@@ -93,7 +92,6 @@ export const TEAM_MEMBERS: TeamMember[] = [
     category: "tech",
     team: "Technology",
     photo: "/team/Thomas_Assalian.jpg",
-    photoOffset: 20,
   },
   {
     name: "Daniela Villamizar Useche",
@@ -127,7 +125,6 @@ export const TEAM_MEMBERS: TeamMember[] = [
     category: "sponsorship",
     team: "Sponsorship",
     photo: "/team/Jovan_Gavranovic.jpg",
-    photoOffset: 20,
   },
   {
     name: "Mamadou Camara",
@@ -263,7 +260,6 @@ export const TEAM_MEMBERS: TeamMember[] = [
     category: "internal",
     team: "Internal",
     photo: "/team/Noorjahan_Kazi.jpg",
-    photoOffset: 25,
   },
   {
     name: "Ahmed Fakhir",
@@ -306,6 +302,13 @@ export const TEAM_MEMBERS: TeamMember[] = [
     team: "Events",
     photo: "/team/Luella_Mailloux.png",
     photoOffset: 7,
+  },
+  {
+    name: "Alexandra Siganos",
+    role: { en: "Director of Logistics", fr: "Directrice de la logistique" },
+    category: "logistics",
+    team: "Logistics",
+    photo: "/team/Alexandra_Siganos.jpg",
   },
 ];
 
