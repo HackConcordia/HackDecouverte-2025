@@ -275,6 +275,13 @@ export const TEAM_MEMBERS: TeamMember[] = [
     team: "Events",
     photo: "/team/Luella_Mailloux.png",
   },
+  {
+    name: "Alexandra Siganos",
+    role: { en: "Director of Logistics", fr: "Directrice de la logistique" },
+    category: "logistics",
+    team: "Logistics",
+    photo: "/team/Alexandra_Siganos.jpg",
+  },
 ];
 
 const FILTERS: { value: Filter; textKey: string }[] = [
