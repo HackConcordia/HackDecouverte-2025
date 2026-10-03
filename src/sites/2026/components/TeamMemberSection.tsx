@@ -24,7 +24,7 @@ export type TeamMember = {
   team: string;
   bio?: Bilingual;
   photo?: string;
-  photoOffset?: number; // e.g. 15 = move photo up by 15%
+  photoPosition?: number; // vertical crop focus: 0 = top of photo, 100 = bottom (default 10)
 };
 
 export const TEAM_MEMBERS: TeamMember[] = [
@@ -35,7 +35,6 @@ export const TEAM_MEMBERS: TeamMember[] = [
     category: "lead",
     team: "Lead",
     photo: "/team/Toby_Fischer.jpg",
-    photoOffset: 7,
   },
   {
     name: "Lucia Jimenez",
@@ -43,7 +42,6 @@ export const TEAM_MEMBERS: TeamMember[] = [
     category: "lead",
     team: "Lead",
     photo: "/team/Lucia_Jimenez.jpg",
-    photoOffset: 7,
   },
 
   // Technology
@@ -60,7 +58,6 @@ export const TEAM_MEMBERS: TeamMember[] = [
     category: "tech",
     team: "Technology",
     photo: "/team/Maria-Christine_Catiche.jpg",
-    photoOffset: 7,
   },
   {
     name: "Raouf Ouibrahim",
@@ -68,7 +65,6 @@ export const TEAM_MEMBERS: TeamMember[] = [
     category: "tech",
     team: "Technology",
     photo: "/team/Raouf_Ouibrahim.jpg",
-    photoOffset: 7,
   },
   {
     name: "Mijan Ullah",
@@ -76,7 +72,6 @@ export const TEAM_MEMBERS: TeamMember[] = [
     category: "tech",
     team: "Technology",
     photo: "/team/Mijan_Ullah.jpg",
-    photoOffset: 15,
   },
   {
     name: "Shay Luan",
@@ -84,7 +79,6 @@ export const TEAM_MEMBERS: TeamMember[] = [
     category: "tech",
     team: "Technology",
     photo: "/team/Shay_Luan.jpg",
-    photoOffset: 7,
   },
   {
     name: "Thomas Assalian",
@@ -99,7 +93,6 @@ export const TEAM_MEMBERS: TeamMember[] = [
     category: "tech",
     team: "Technology",
     photo: "/team/Daniela_Villamizar_Useche.jpg",
-    photoOffset: 7,
   },
   {
     name: "Emily Ng",
@@ -107,7 +100,6 @@ export const TEAM_MEMBERS: TeamMember[] = [
     category: "tech",
     team: "Technology",
     photo: "/team/Emily_Ng.jpg",
-    photoOffset: 7,
   },
 
   // Sponsorship
@@ -117,7 +109,6 @@ export const TEAM_MEMBERS: TeamMember[] = [
     category: "sponsorship",
     team: "Sponsorship",
     photo: "/team/Sarah_Tannous.jpg",
-    photoOffset: 7,
   },
   {
     name: "Jovan Gavranovic",
@@ -132,7 +123,6 @@ export const TEAM_MEMBERS: TeamMember[] = [
     category: "sponsorship",
     team: "Sponsorship",
     photo: "/team/Mamadou_Camara.jpg",
-    photoOffset: 7,
   },
   {
     name: "Salma Benlemlih",
@@ -140,7 +130,6 @@ export const TEAM_MEMBERS: TeamMember[] = [
     category: "sponsorship",
     team: "Sponsorship",
     photo: "/team/Salma_Benlemlih.jpg",
-    photoOffset: 7,
   },
   {
     name: "Benjamin Liu",
@@ -148,7 +137,6 @@ export const TEAM_MEMBERS: TeamMember[] = [
     category: "sponsorship",
     team: "Sponsorship",
     photo: "/team/Benjamin_Liu.jpg",
-    photoOffset: 7,
   },
   {
     name: "Audrey Clara Tchantchou",
@@ -156,7 +144,6 @@ export const TEAM_MEMBERS: TeamMember[] = [
     category: "sponsorship",
     team: "Sponsorship",
     photo: "/team/Audrey_Clara_Tchantchou.jpg",
-    photoOffset: 7,
   },
   {
     name: "Grace Ashley",
@@ -164,7 +151,6 @@ export const TEAM_MEMBERS: TeamMember[] = [
     category: "sponsorship",
     team: "Sponsorship",
     photo: "/team/Grace_Ashley.jpg",
-    photoOffset: 7,
   },
 
   // Marketing
@@ -174,7 +160,6 @@ export const TEAM_MEMBERS: TeamMember[] = [
     category: "marketing",
     team: "Marketing",
     photo: "/team/Christina_Alexandrakis.jpg",
-    photoOffset: 7,
   },
   {
     name: "Matthew Lucas Santiago",
@@ -182,7 +167,6 @@ export const TEAM_MEMBERS: TeamMember[] = [
     category: "marketing",
     team: "Marketing",
     photo: "/team/Matthew_Lucas_Santiago.jpg",
-    photoOffset: 7,
   },
   {
     name: "Seydina Gueye",
@@ -190,7 +174,6 @@ export const TEAM_MEMBERS: TeamMember[] = [
     category: "marketing",
     team: "Marketing",
     photo: "/team/Seydina_Gueye.jpg",
-    photoOffset: 7,
   },
   {
     name: "Goher Ali Syed",
@@ -198,7 +181,6 @@ export const TEAM_MEMBERS: TeamMember[] = [
     category: "marketing",
     team: "Marketing",
     photo: "/team/Goher_Ali_Syed.jpg",
-    photoOffset: 7,
   },
 
   // Logistics
@@ -208,7 +190,6 @@ export const TEAM_MEMBERS: TeamMember[] = [
     category: "logistics",
     team: "Logistics",
     photo: "/team/Ning_Ye.jpg",
-    photoOffset: 7,
   },
   {
     name: "Julien Halde",
@@ -216,7 +197,6 @@ export const TEAM_MEMBERS: TeamMember[] = [
     category: "logistics",
     team: "Logistics",
     photo: "/team/Julien_Halde.jpg",
-    photoOffset: 10,
   },
   {
     name: "Arthur Huon de Penanster",
@@ -224,7 +204,6 @@ export const TEAM_MEMBERS: TeamMember[] = [
     category: "logistics",
     team: "Logistics",
     photo: "/team/Arthur_Huon_de_Penanster.jpg",
-    photoOffset: 7,
   },
 
   // Events
@@ -234,7 +213,6 @@ export const TEAM_MEMBERS: TeamMember[] = [
     category: "events",
     team: "Events",
     photo: "/team/Andrew_Phillips.jpg",
-    photoOffset: 7,
   },
   {
     name: "Alisa Ignatina",
@@ -242,7 +220,6 @@ export const TEAM_MEMBERS: TeamMember[] = [
     category: "events",
     team: "Events",
     photo: "/team/Alisa_Ignatina.jpg",
-    photoOffset: 7,
   },
   {
     name: "Ashley Samerev",
@@ -250,7 +227,6 @@ export const TEAM_MEMBERS: TeamMember[] = [
     category: "events",
     team: "Events",
     photo: "/team/Ashley_Samerev.jpg",
-    photoOffset: 7,
   },
 
   // Internal
@@ -267,7 +243,6 @@ export const TEAM_MEMBERS: TeamMember[] = [
     category: "internal",
     team: "Internal",
     photo: "/team/Ahmed_Fakhir.jpg",
-    photoOffset: 7,
   },
 
   // Finance
@@ -277,7 +252,6 @@ export const TEAM_MEMBERS: TeamMember[] = [
     category: "finance",
     team: "Finance",
     photo: "/team/Amani_Magra.jpg",
-    photoOffset: 7,
   },
 
   {
@@ -286,7 +260,6 @@ export const TEAM_MEMBERS: TeamMember[] = [
     category: "tech",
     team: "Technology",
     photo: "/team/Abdou_Maouda.jpg",
-    photoOffset: 7,
   },
   {
     name: "Ellen Ung",
@@ -301,7 +274,6 @@ export const TEAM_MEMBERS: TeamMember[] = [
     category: "events",
     team: "Events",
     photo: "/team/Luella_Mailloux.png",
-    photoOffset: 7,
   },
   {
     name: "Alexandra Siganos",
@@ -522,10 +494,9 @@ function TeamCard({ member, index, animateAsFilter }: { member: TeamMember; inde
     setTilt(`rotateY(${round1(x * 16)}deg) rotateX(${round1(-y * 16)}deg) translateY(-6px)`);
   };
 
-  const offset = member.photoOffset ?? 0;
-  const avatarStyle = offset > 0 ? cssVars({
-    "--offset-y": `-${offset}%`,
-  }) : undefined;
+  const avatarStyle = cssVars({
+    "--pos-y": `${member.photoPosition ?? 10}%`,
+  });
 
   return (
     <article
